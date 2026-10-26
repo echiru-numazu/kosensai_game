@@ -38,6 +38,7 @@
 }
 
 *{box-sizing:border-box}
+[hidden]{display:none !important}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-jp);
   font-size:16px;line-height:1.8;overflow-x:hidden;
@@ -160,7 +161,6 @@ button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation}
 .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
 .btn.ghost:hover{background:transparent;border-color:var(--gold);color:var(--gold)}
 .btn[disabled]{opacity:.45;cursor:not-allowed}
-.locknote{font-size:.82rem;color:var(--muted)}
 
 @media (prefers-reduced-motion:no-preference){
   .shake{animation:shake .4s}
@@ -269,7 +269,7 @@ footer p{font-size:.85rem;color:var(--board-muted)}
     <div class="wrap">
       <div class="lead-row">
         <h1>すきな番号をえらんでね</h1>
-        <p>番号をタップすると日本語の問題が出ます。単語カードを正しい順にならべてタイ語の文を作ろう。正解した問題だけ、ボードにもどって次へすすめます。</p>
+        <p>番号をタップすると日本語の問題が出ます。単語カードを正しい順にならべてタイ語の文を作ろう。むずかしいときは「ボードにもどる」で、ほかの番号からえらんでもOK。</p>
       </div>
       <div class="tiles" id="tiles"></div>
       <aside class="hintbox">
@@ -306,7 +306,6 @@ footer p{font-size:.85rem;color:var(--board-muted)}
             <button class="btn ghost" type="button" id="btn-hint">ヒント</button>
             <button class="btn ghost" type="button" id="btn-back">ボードにもどる</button>
           </div>
-          <p class="locknote" id="locknote" hidden>この問題は正解するとボードにもどれます。こまったら「ヒント」を使ってね。</p>
         </div>
 
         <div class="solved" id="solved" hidden>
@@ -387,12 +386,12 @@ footer p{font-size:.85rem;color:var(--board-muted)}
   var el = function(id){ return document.getElementById(id); };
   var viewBoard = el('view-board'), viewQuiz = el('view-quiz'), viewClear = el('view-clear');
   var tilesEl = el('tiles'), slotsEl = el('slots'), poolEl = el('pool');
-  var verdictEl = el('verdict'), readingEl = el('reading'), lockNote = el('locknote');
+  var verdictEl = el('verdict'), readingEl = el('reading');
   var btnBack = el('btn-back'), btnCheck = el('btn-check'), btnAgain = el('btn-again'), btnHint = el('btn-hint');
   var playEl = el('play'), solvedEl = el('solved'), trayEl = el('tray');
 
   var cleared = load();
-  var qIndex = -1, placed = [], pool = [], hinted = [], attempted = false;
+  var qIndex = -1, placed = [], pool = [], hinted = [];
 
   function load(){
     var blank = QUESTIONS.map(function(){ return false; });
@@ -497,6 +496,12 @@ footer p{font-size:.85rem;color:var(--board-muted)}
     el('q-jp').textContent = q.jp;
     el('q-note').textContent = q.note;
     startRound();
+    /* 前の問題の正解パネルを消してから表示する */
+    el('solved-th').textContent = '';
+    el('solved-kana').textContent = '';
+    el('solved-mean').textContent = '';
+    solvedEl.classList.remove('pop');
+    trayEl.classList.remove('shake');
     playEl.hidden = false;
     solvedEl.hidden = true;
     show('quiz');
@@ -507,9 +512,6 @@ footer p{font-size:.85rem;color:var(--board-muted)}
     placed = q.words.map(function(){ return null; });
     hinted = q.words.map(function(){ return false; });
     pool = shuffle(q.words);
-    attempted = false;
-    btnBack.hidden = false;
-    lockNote.hidden = true;
     say('', '');
     renderRound();
   }
@@ -602,9 +604,6 @@ footer p{font-size:.85rem;color:var(--board-muted)}
       el('btn-next').textContent = (doneCount() === QUESTIONS.length) ? '結果を見る' : 'ボードにもどる';
       return;
     }
-    attempted = true;
-    btnBack.hidden = true;
-    lockNote.hidden = false;
     say('ならび順がちがいます。直してもう一度ためしてね。', 'bad');
     trayEl.classList.remove('shake');
     void trayEl.offsetWidth;
@@ -679,10 +678,7 @@ footer p{font-size:.85rem;color:var(--board-muted)}
     say('', '');
     renderRound();
   });
-  btnBack.addEventListener('click', function(){
-    if (attempted) return;
-    goBoard();
-  });
+  btnBack.addEventListener('click', goBoard);
   el('btn-next').addEventListener('click', goBoard);
   el('btn-restart').addEventListener('click', function(){
     cleared = QUESTIONS.map(function(){ return false; });
