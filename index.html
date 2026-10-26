@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#e3f3ec">
+<title>タイ語であそぼう</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chonburi&family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+Thai:wght@400;600;700&display=swap">
+
+<style>
+/* Layout: the booth entrance — two big doors, one to the game, one to the phrase sheets (same light palette) */
+:root{
+  color-scheme:light;
+  --bg:#faf6ec;
+  --paper:#ffffff;
+  --ink:#1b3430;
+  --muted:#5b766e;
+  --line:#e4d9c3;
+  --board:#e3f3ec;
+  --board-ink:#173d36;
+  --board-line:#bcdccd;
+  --board-muted:#4f7a6e;
+  --accent:#1f7a68;
+  --head:#2f8f6b;
+  --gold:#a8730f;
+  --gold-soft:#fbefcf;
+
+  --font-display:"Chonburi","Noto Serif Thai",ui-serif,serif;
+  --font-jp:"Zen Maru Gothic",system-ui,-apple-system,"Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  --font-thai:"Noto Sans Thai","Zen Maru Gothic",sans-serif;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;
+  background:var(--bg);color:var(--ink);font-family:var(--font-jp);font-size:16px;line-height:1.8;
+  -webkit-tap-highlight-color:transparent}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);
+  z-index:30;background:var(--board)}
+h1,h2,p{margin:0;text-wrap:balance}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+.wrap{width:100%;max-width:880px;margin:0 auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* ---------- hero ---------- */
+.hero{background:var(--board);color:var(--board-ink);box-shadow:0 3px 0 var(--gold);
+  padding-top:env(safe-area-inset-top,0px)}
+.hero .wrap{padding-block:clamp(28px,6vw,52px);display:grid;gap:6px;text-align:center;justify-items:center}
+.hero .th{font-family:var(--font-display);color:var(--gold);font-size:clamp(1.5rem,6vw,2.2rem);line-height:1.4}
+.hero h1{font-size:clamp(1.5rem,5.6vw,2.2rem);font-weight:900;line-height:1.4}
+.hero p{color:var(--board-muted);font-size:.95rem;max-width:32em}
+
+/* ---------- doors ---------- */
+main{flex:1}
+main .wrap{padding-block:clamp(26px,5vw,44px) clamp(36px,6vw,56px)}
+.ask{text-align:center;font-weight:700;color:var(--muted);margin-bottom:clamp(16px,3vw,22px)}
+.doors{display:grid;gap:clamp(14px,3vw,22px);grid-template-columns:minmax(0,1fr)}
+@media (min-width:640px){.doors{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.door{position:relative;display:flex;flex-direction:column;gap:10px;text-decoration:none;
+  background:var(--paper);border:2px solid var(--board-line);border-radius:22px;
+  padding:clamp(18px,4vw,26px);box-shadow:0 3px 0 var(--board-line);
+  transition:transform .14s ease,border-color .14s ease,box-shadow .14s ease}
+.door:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 12px 24px rgba(23,61,54,.12)}
+.door:active{transform:translateY(-1px)}
+.door .top{display:flex;align-items:center;gap:14px}
+.door .ico{flex:none;width:58px;height:58px;border-radius:18px;display:grid;place-items:center;
+  font-size:1.9rem;background:var(--board);border:2px solid var(--board-line)}
+.door .name{display:flex;flex-direction:column;line-height:1.35;min-width:0}
+.door .name [lang="th"]{font-family:var(--font-display);color:var(--gold);font-size:1rem}
+.door h2{font-size:clamp(1.25rem,4.4vw,1.45rem);font-weight:900}
+.door .desc{font-size:.9rem;color:var(--muted)}
+.door ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.door li{font-size:.75rem;font-weight:700;border-radius:999px;padding:2px 10px;
+  background:var(--bg);border:1px solid var(--line)}
+.door .go{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;border-radius:999px;padding:9px 22px;font-size:.95rem;font-weight:700}
+.door .go::after{content:"→";transition:transform .14s ease}
+.door:hover .go{background:var(--gold)}
+.door:hover .go::after{transform:translateX(3px)}
+.door--game{border-top:8px solid var(--gold)}
+.door--matome{border-top:8px solid var(--head)}
+
+.tip{margin-top:clamp(18px,3vw,26px);text-align:center;font-size:.85rem;color:var(--muted)}
+
+footer{background:var(--board);color:var(--board-ink);text-align:center;
+  padding:22px 16px calc(22px + env(safe-area-inset-bottom,0px))}
+footer .th{font-family:var(--font-display);color:var(--gold);font-size:1.2rem}
+footer p{font-size:.85rem;color:var(--board-muted)}
+
+@media (prefers-reduced-motion:reduce){
+  .door,.door .go::after{transition:none}
+  .door:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="th" lang="th">ยินดีต้อนรับ</p>
+    <h1>タイ語であそぼう！</h1>
+    <p>ユンディー・トンラップ（ようこそ）。<br>タイでよく使う表現を、ゲームとまとめで覚えよう。</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="ask">どっちにする？</p>
+    <div class="doors">
+      <a class="door door--game" href="thai-sentence-game.html">
+        <div class="top">
+          <span class="ico" aria-hidden="true">🧩</span>
+          <span class="name"><span lang="th">เรียงประโยค</span><h2>ならべかえゲーム</h2></span>
+        </div>
+        <p class="desc">単語カードを正しい順にならべて、タイ語の文を作ろう。ぜんぶ正解したらお菓子をプレゼント！</p>
+        <ul><li>全12問</li><li>★〜★★★</li><li>🍬 プレゼントあり</li></ul>
+        <span class="go">ゲームであそぶ</span>
+      </a>
+
+      <a class="door door--matome" href="thai-phrase-matome.html">
+        <div class="top">
+          <span class="ico" aria-hidden="true">📖</span>
+          <span class="name"><span lang="th">ประโยคที่ใช้บ่อย</span><h2>フレーズまとめ</h2></span>
+        </div>
+        <p class="desc">よく使うタイ語を、カタカナ・発音記号・音声つきで確認。単語ごとの意味とならび方もわかります。</p>
+        <ul><li>全19フレーズ</li><li>🔊 音声つき</li><li>文の分析</li></ul>
+        <span class="go">まとめを見る</span>
+      </a>
+    </div>
+    <p class="tip">💡 まとめで予習してからゲームに挑戦すると、かんたんに解けるかも！</p>
+  </div>
+</main>
+
+<footer>
+  <p class="th" lang="th">สนุกนะ</p>
+  <p>サヌック・ナ（たのしんでね！）</p>
+</footer>
+
+</body>
+</html>
