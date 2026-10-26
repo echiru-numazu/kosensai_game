@@ -1,0 +1,1365 @@
+<title>タイでよく使う表現</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chonburi&family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+Thai:wght@400;600;700&display=swap">
+
+<style>
+/* Layout: a market-stall booklet — alternating wide illustrated scenes and phrase cards in a wrapping grid. */
+:root{
+  --bg:#eaf2ee;          /* pale jade mist */
+  --surface:#ffffff;
+  --sunken:#dfece6;
+  --ink:#14302b;         /* deep pine ink */
+  --muted:#57786f;
+  --line:#c7ded3;
+  --temple:#0e403c;      /* deep teal panels */
+  --temple-ink:#0e403c;
+  --gold:#c8911f;
+  --gold-soft:#f5e3bd;
+  --chili:#cf3f28;
+  --chili-soft:#fbdcd4;
+  --jade:#2c8c6c;
+  --lotus:#d9769a;
+  --sky:#bfe0e4;
+  --water:#7fb9bd;
+  --skin:#e3b188;
+  --on-temple:#f2efe2;
+
+  --font-display:"Chonburi","Noto Serif Thai",ui-serif,serif;
+  --font-jp:"Zen Maru Gothic",system-ui,-apple-system,"Hiragino Maru Gothic ProN",sans-serif;
+  --font-thai:"Noto Sans Thai","Zen Maru Gothic",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0a1f1d; --surface:#112c28; --sunken:#0d2522; --ink:#e6f1ec; --muted:#8fb2a8;
+  --line:#23453f; --temple:#071a18; --temple-ink:#9ad8c2; --gold:#e3b24c; --gold-soft:#3a3016;
+  --chili:#ef6a52; --chili-soft:#43201a; --jade:#4dba8e; --lotus:#ef9ab8;
+  --sky:#15393c; --water:#2b6b70; --on-temple:#f2efe2; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0a1f1d; --surface:#112c28; --sunken:#0d2522; --ink:#e6f1ec; --muted:#8fb2a8;
+  --line:#23453f; --temple:#071a18; --temple-ink:#9ad8c2; --gold:#e3b24c; --gold-soft:#3a3016;
+  --chili:#ef6a52; --chili-soft:#43201a; --jade:#4dba8e; --lotus:#ef9ab8;
+  --sky:#15393c; --water:#2b6b70; --on-temple:#f2efe2; color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-jp);font-size:16px;line-height:1.85;
+  -webkit-text-size-adjust:100%;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--temple)}
+h1,h2,h3{text-wrap:balance;line-height:1.35;margin:0}
+p{margin:0}
+a{color:inherit}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+
+/* ---------- shell ---------- */
+.band{width:100%}
+.wrap{max-width:1120px;margin:0 auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:clamp(40px,6vw,76px)}
+.band--sunken{background:var(--sunken)}
+.band--temple{background:var(--temple);color:var(--on-temple)}
+.band--temple .eyebrow{color:var(--gold)}
+.band--temple .lead{color:#cfe2d9}
+
+/* ---------- top nav ---------- */
+nav.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:25;background:var(--temple);
+  box-shadow:0 2px 0 var(--gold)}
+nav.topbar .inner{max-width:1120px;margin:0 auto;display:flex;gap:4px;align-items:center;
+  overflow-x:auto;scrollbar-width:none;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:8px}
+nav.topbar .inner::-webkit-scrollbar{display:none}
+nav.topbar a{flex:0 0 auto;color:#d7e6de;text-decoration:none;font-size:.8rem;font-weight:700;
+  padding:6px 11px;border-radius:999px;white-space:nowrap}
+nav.topbar a:hover{background:rgba(255,255,255,.12);color:#fff}
+nav.topbar a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+nav.topbar .brand{flex:0 0 auto;font-family:var(--font-display);color:var(--gold);font-size:.95rem;
+  padding-right:10px;margin-right:4px;border-right:1px solid rgba(255,255,255,.18)}
+
+/* ---------- hero ---------- */
+.hero{background:var(--temple);color:var(--on-temple);position:relative}
+.hero .wrap{padding-block:clamp(28px,5vw,56px) 0}
+.hero-grid{display:grid;gap:clamp(20px,3vw,36px);grid-template-columns:1fr;align-items:center}
+@media (min-width:860px){.hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr)}}
+.hero-kicker{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);
+  border:1px solid rgba(232,178,76,.5);color:var(--gold);border-radius:999px;
+  padding:5px 14px;font-size:.78rem;font-weight:700;letter-spacing:.08em}
+.hero-kicker svg{width:18px;height:14px;flex:0 0 auto}
+.hero h1{font-size:clamp(2.1rem,7.2vw,3.5rem);font-weight:900;letter-spacing:.01em;margin-top:16px}
+.hero .thai-wordmark{font-family:var(--font-display);color:var(--gold);
+  font-size:clamp(1.6rem,5.5vw,2.4rem);line-height:1.5;margin-top:4px}
+.hero .lead{color:#cfe2d9;margin-top:14px;max-width:34em}
+.hero-stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.hero-stats span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+  border-radius:12px;padding:7px 13px;font-size:.82rem;font-weight:700}
+.scene-hero{display:block;width:100%;height:auto;max-width:100%;border-radius:20px 20px 0 0}
+
+/* ---------- section heads ---------- */
+.eyebrow{font-family:var(--font-display);color:var(--gold);font-size:1.15rem;line-height:1.4}
+.sec-head{display:grid;gap:8px;margin-bottom:clamp(22px,3vw,34px)}
+.sec-head h2{font-size:clamp(1.45rem,4.4vw,2.1rem);font-weight:900}
+.sec-head .lead{color:var(--muted);max-width:40em}
+.num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;
+  background:var(--gold);color:#1d1403;font-weight:900;font-size:.95rem;font-family:var(--font-jp)}
+.sec-head .row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+
+/* ---------- zigzag divider ---------- */
+.divider{display:block;width:100%;height:11px}
+
+/* ---------- scenes ---------- */
+figure.scene{margin:0 0 clamp(22px,3vw,30px);border:1px solid var(--line);border-radius:22px;
+  overflow:hidden;background:var(--sky)}
+figure.scene svg{display:block;width:100%;height:auto;max-width:100%}
+figure.scene figcaption{background:var(--surface);border-top:1px solid var(--line);color:var(--muted);
+  font-size:.82rem;padding:9px 16px}
+
+/* ---------- phrase cards ---------- */
+.cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;
+  padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card .pic{width:72px;height:72px;flex:0 0 auto}
+.card .pic svg{width:100%;height:100%;display:block}
+.thai{font-family:var(--font-thai);font-weight:700;font-size:clamp(1.55rem,5.2vw,1.95rem);
+  line-height:1.9;color:var(--temple-ink);word-break:break-word}
+.kata{font-size:.82rem;font-weight:700;letter-spacing:.1em;color:var(--gold);text-transform:none}
+.mean{font-size:1.05rem;font-weight:700}
+.gloss{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}
+.gloss b{font-family:var(--font-thai);font-weight:600}
+.chip{display:inline-flex;align-items:baseline;gap:5px;background:var(--sunken);
+  border:1px solid var(--line);border-radius:9px;padding:3px 9px;font-size:.78rem;color:var(--muted)}
+.band--temple .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);color:var(--on-temple)}
+.band--temple .thai{color:#fff}
+.band--temple .chip{background:rgba(0,0,0,.2);border-color:rgba(255,255,255,.14);color:#cfe2d9}
+.band--temple .mean{color:#fff}
+
+/* ---------- callout (squared, tabbed — not a rounded accent-rail card) ---------- */
+.callout{background:var(--gold-soft);border:1px solid var(--gold);padding:18px 18px 16px;
+  margin-top:clamp(20px,3vw,28px)}
+.callout .tab{display:inline-block;background:var(--gold);color:#1d1403;font-weight:900;
+  font-size:.78rem;letter-spacing:.08em;padding:3px 11px;margin:-28px 0 12px -1px}
+.callout p + p{margin-top:8px}
+.callout.chili{background:var(--chili-soft);border-color:var(--chili)}
+.callout.chili .tab{background:var(--chili);color:#fff}
+
+/* ---------- S+V+O strip ---------- */
+.svo{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));align-items:stretch}
+.svo .slot{background:var(--surface);border:2px solid var(--temple-ink);border-radius:16px;
+  padding:14px;text-align:center;display:grid;gap:4px;min-width:0}
+.svo .slot .role{font-size:.74rem;font-weight:900;letter-spacing:.12em;color:var(--gold)}
+.svo .slot .thai{font-size:clamp(1.4rem,5vw,1.7rem)}
+.svo .slot .jp{font-size:.92rem;color:var(--muted);font-weight:700}
+.svo .slot .pic{width:52px;height:52px;margin:0 auto}
+.svo .slot .pic svg{width:100%;height:100%;display:block}
+.whole{margin-top:14px;background:var(--temple);color:var(--on-temple);border-radius:16px;
+  padding:16px;display:grid;gap:6px;justify-items:center;text-align:center}
+.whole .thai{color:#fff}
+.whole .en{font-size:.84rem;color:#a9cabd;letter-spacing:.04em}
+
+/* ---------- two-mai compare ---------- */
+.compare{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.compare .side{border:1px solid var(--line);border-radius:18px;padding:16px;background:var(--surface);min-width:0}
+.compare .side h3{font-size:1.05rem;display:flex;align-items:center;gap:10px}
+.compare .side h3 svg{width:34px;height:34px;flex:0 0 auto}
+.compare .side .thai{font-size:2.1rem}
+.compare ul{margin:8px 0 0;padding-left:1.15em;color:var(--muted);font-size:.92rem}
+.compare li + li{margin-top:4px}
+
+/* ---------- letter builder ---------- */
+.builder{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;
+  background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px 14px}
+.glyph{display:grid;gap:2px;justify-items:center;background:var(--sunken);border:2px dashed var(--line);
+  border-radius:14px;padding:10px 16px;min-width:84px}
+.glyph .g{font-family:var(--font-thai);font-size:2.3rem;line-height:1.5;color:var(--temple-ink);font-weight:700}
+.glyph .t{font-size:.74rem;font-weight:900;letter-spacing:.06em;color:var(--muted)}
+.op{font-size:1.5rem;font-weight:900;color:var(--gold)}
+.glyph.result{background:var(--gold-soft);border-style:solid;border-color:var(--gold)}
+
+/* ---------- game steps ---------- */
+.steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px;
+  display:grid;gap:10px;min-width:0}
+.step .pic{width:84px;height:84px}
+.step .pic svg{width:100%;height:100%;display:block}
+.step h3{font-size:1.02rem}
+.step p{font-size:.9rem;color:var(--muted)}
+.step .no{font-family:var(--font-display);color:var(--gold);font-size:1.3rem;line-height:1}
+
+/* ---------- mini game ---------- */
+.game{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(16px,3vw,24px);
+  display:grid;gap:14px}
+.game-top{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between}
+.game-q{font-size:1.15rem;font-weight:900}
+.game-count{font-size:.8rem;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.slots{display:flex;flex-wrap:wrap;gap:10px;min-height:76px;background:var(--sunken);
+  border:2px dashed var(--line);border-radius:16px;padding:12px}
+.slots:empty::before{content:"下の単語をタップして、正しい順にならべよう";color:var(--muted);font-size:.86rem}
+.pool{display:flex;flex-wrap:wrap;gap:10px}
+.word{font-family:var(--font-thai);font-weight:700;font-size:1.25rem;line-height:1.8;
+  background:var(--gold-soft);color:var(--temple-ink);border:2px solid var(--gold);border-radius:14px;
+  padding:6px 14px;cursor:pointer;font-feature-settings:normal;display:grid;gap:0;justify-items:center}
+.word small{display:block;font-family:var(--font-jp);font-size:.66rem;font-weight:700;
+  letter-spacing:.06em;color:var(--muted);line-height:1.4}
+.word:hover{transform:translateY(-2px)}
+.word:focus-visible{outline:3px solid var(--jade);outline-offset:2px}
+.word.placed{background:var(--surface);border-color:var(--temple-ink)}
+.game-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{font-family:var(--font-jp);font-weight:900;font-size:.92rem;border-radius:12px;padding:10px 20px;
+  cursor:pointer;border:2px solid var(--temple-ink);background:var(--temple);color:var(--on-temple)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.verdict{font-weight:900;font-size:.95rem;min-height:1.6em}
+.verdict.ok{color:var(--jade)}
+.verdict.no{color:var(--chili)}
+@media (prefers-reduced-motion:no-preference){.word{transition:transform .12s ease}}
+
+/* ---------- footer ---------- */
+footer .wrap{display:grid;gap:14px;justify-items:center;text-align:center;padding-block:clamp(26px,4vw,44px)}
+footer .thai{font-size:clamp(1.6rem,6vw,2.2rem);color:var(--gold)}
+footer p{color:#cfe2d9;font-size:.9rem}
+.scene-footer{display:block;width:100%;height:auto;max-width:100%}
+
+@media print{
+  nav.topbar,.game-actions{display:none}
+  body{background:#fff}
+  .band--temple,.hero{background:#fff;color:#000}
+  .wrap{padding-block:18px}
+}
+</style>
+
+<!-- ============ ILLUSTRATION SPRITE ============ -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="pat-roof" width="12" height="12" patternUnits="userSpaceOnUse">
+      <path d="M0 12 6 0 12 12Z" fill="var(--gold)"/>
+    </pattern>
+    <pattern id="pat-roof-teal" width="12" height="12" patternUnits="userSpaceOnUse">
+      <path d="M0 12 6 0 12 12Z" fill="var(--temple)"/>
+    </pattern>
+  </defs>
+
+  <!-- Thai flag -->
+  <symbol id="i-flag" viewBox="0 0 30 20">
+    <rect width="30" height="20" fill="#cf3f28"/>
+    <rect y="3.33" width="30" height="13.34" fill="#f4f1e6"/>
+    <rect y="6.67" width="30" height="6.66" fill="#1c3f82"/>
+  </symbol>
+
+  <!-- greeting: wai -->
+  <symbol id="i-wai" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--gold-soft)"/>
+    <circle cx="32" cy="19" r="8" fill="var(--skin)"/>
+    <path d="M32 29c-10 0-18 8-18 18v7h36v-7c0-10-8-18-18-18Z" fill="var(--temple-ink)"/>
+    <path d="M32 31 24 44c-1.6 2.6.3 5.6 3.4 5.6h9.2c3.1 0 5-3 3.4-5.6L32 31Z" fill="var(--skin)"/>
+    <path d="M32 33v15" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M50 13l1.6 4 4 1.6-4 1.6L50 24l-1.6-3.8-4-1.6 4-1.6Z" fill="var(--gold)"/>
+  </symbol>
+
+  <!-- thank you: hands + heart -->
+  <symbol id="i-thanks" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--gold-soft)"/>
+    <path d="M32 46c-4.6-4-11-8.3-11-14.2 0-3.7 3-6.6 6.6-6.6 2.4 0 4.2 1.2 4.4 2.6.2-1.4 2-2.6 4.4-2.6 3.6 0 6.6 2.9 6.6 6.6C43 37.7 36.6 42 32 46Z" fill="var(--chili)"/>
+    <path d="M14 56c0-6 4-11 9-11l4 5 5-3v9Z" fill="var(--skin)"/>
+    <path d="M50 56c0-6-4-11-9-11l-4 5-5-3v9Z" fill="var(--skin)"/>
+  </symbol>
+
+  <!-- sorry: bow -->
+  <symbol id="i-sorry" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--gold-soft)"/>
+    <circle cx="26" cy="26" r="8" fill="var(--skin)"/>
+    <path d="M30 34c-9 1-15 9-15 18v2h34v-4c0-9-9-17-19-16Z" fill="var(--temple-ink)"/>
+    <path d="M47 20c2 3.4 3.4 5.6 3.4 7.2A3.4 3.4 0 0 1 47 30.6a3.4 3.4 0 0 1-3.4-3.4c0-1.6 1.4-3.8 3.4-7.2Z" fill="var(--water)"/>
+  </symbol>
+
+  <!-- krap: male -->
+  <symbol id="i-male" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#dbe7f5"/>
+    <circle cx="32" cy="20" r="8" fill="var(--skin)"/>
+    <path d="M32 30c-8 0-14 6-14 14v4h28v-4c0-8-6-14-14-14Z" fill="#2f5aa8"/>
+    <rect x="23" y="48" width="7" height="12" rx="2" fill="#1f3f78"/>
+    <rect x="34" y="48" width="7" height="12" rx="2" fill="#1f3f78"/>
+  </symbol>
+
+  <!-- ka: female -->
+  <symbol id="i-female" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#fbe0ea"/>
+    <circle cx="32" cy="20" r="8" fill="var(--skin)"/>
+    <path d="M23 18c0-6 4-10 9-10s9 4 9 10c0 2-2 2-4 1-3-1.6-7-1.6-10 0-2 1-4 1-4-1Z" fill="#43291f"/>
+    <path d="M32 30c-7 0-11 5-13 14l-1 6h28l-1-6c-2-9-6-14-13-14Z" fill="var(--lotus)"/>
+    <rect x="24" y="50" width="6" height="10" rx="2" fill="#b1466a"/>
+    <rect x="34" y="50" width="6" height="10" rx="2" fill="#b1466a"/>
+  </symbol>
+
+  <!-- tone: wavy arrow -->
+  <symbol id="i-tone" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--gold-soft)"/>
+    <path d="M10 42c6 0 8-16 14-16s8 16 14 16 8-16 14-16" fill="none" stroke="var(--temple-ink)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M52 20l6 6-8 2Z" fill="var(--chili)"/>
+  </symbol>
+
+  <!-- rice bowl -->
+  <symbol id="i-rice" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--gold-soft)"/>
+    <path d="M18 34c0-7 6-12 14-12s14 5 14 12Z" fill="#fdfcf4" stroke="var(--temple-ink)" stroke-width="2"/>
+    <path d="M13 34h38c0 9-7 15-19 15s-19-6-19-15Z" fill="var(--temple-ink)"/>
+    <path d="M13 34h38" stroke="var(--gold)" stroke-width="3"/>
+    <path d="M26 18c0-3 2-4 2-7m8 7c0-3 2-4 2-7" stroke="var(--water)" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  </symbol>
+
+  <!-- cat -->
+  <symbol id="i-cat" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#f3e7d4"/>
+    <path d="M16 24 18 10l12 7Zm32 0L46 10 34 17Z" fill="#8d6a4a"/>
+    <circle cx="32" cy="34" r="17" fill="#c69a6d"/>
+    <circle cx="26" cy="31" r="2.6" fill="#2a2016"/><circle cx="38" cy="31" r="2.6" fill="#2a2016"/>
+    <path d="M32 37l-3 2.4h6Z" fill="var(--lotus)"/>
+    <path d="M12 33h8m-8 5h8m32-5h-8m8 5h-8" stroke="#8d6a4a" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M28 43c1.4 1.6 6.6 1.6 8 0" stroke="#2a2016" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- heart / like -->
+  <symbol id="i-like" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#fbe0ea"/>
+    <path d="M32 50C23 42 13 36 13 27.5 13 21 18 16 24.5 16c3.9 0 6.8 2 7.5 4.3.7-2.3 3.6-4.3 7.5-4.3C46 16 51 21 51 27.5 51 36 41 42 32 50Z" fill="var(--lotus)"/>
+  </symbol>
+
+  <!-- chili -->
+  <symbol id="i-chili" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--chili-soft)"/>
+    <path d="M34 14c4 0 6 3 5 6" stroke="var(--jade)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M38 20c6 6 6 18-1 24s-18 4-21-3c6 3 13 1 16-5s3-12 6-16Z" fill="var(--chili)"/>
+  </symbol>
+
+  <!-- mild chili -->
+  <symbol id="i-chili-mild" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--gold-soft)"/>
+    <path d="M30 22c3 0 4.6 2 4 4.4" stroke="var(--jade)" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+    <path d="M33 27c4.6 4.6 4.6 13.6-.8 18s-13.6 3-16-2.4c4.6 2.4 10 .8 12.4-4s2.4-8.4 4.4-11.6Z" fill="var(--chili)"/>
+    <circle cx="46" cy="22" r="4" fill="none" stroke="var(--gold)" stroke-width="2.4"/>
+    <circle cx="46" cy="22" r="1.4" fill="var(--gold)"/>
+  </symbol>
+
+  <!-- no chili -->
+  <symbol id="i-no-chili" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--sunken)"/>
+    <path d="M34 16c3.4 0 5 2.6 4.2 5.2" stroke="var(--jade)" stroke-width="3.6" fill="none" stroke-linecap="round"/>
+    <path d="M37 21c5.4 5.4 5.4 16-1 21.6s-16 3.6-18.8-2.6c5.4 2.6 11.6 1 14.4-4.6s2.6-10.8 5.4-14.4Z" fill="var(--chili)" opacity=".55"/>
+    <circle cx="32" cy="32" r="21" fill="none" stroke="var(--chili)" stroke-width="5"/>
+    <path d="M17 47 47 17" stroke="var(--chili)" stroke-width="5" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- ban / not -->
+  <symbol id="i-ban" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--chili-soft)"/>
+    <circle cx="32" cy="32" r="19" fill="none" stroke="var(--chili)" stroke-width="6"/>
+    <path d="M19 45 45 19" stroke="var(--chili)" stroke-width="6" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- question bubble -->
+  <symbol id="i-ask" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#dbe7f5"/>
+    <path d="M12 20h40v24H34l-9 9v-9H12Z" fill="var(--surface)" stroke="var(--temple-ink)" stroke-width="2.6"/>
+    <path d="M26 28c0-4 3-6 6-6s6 2 6 5.4c0 3-2 4-4 5.4-1.4 1-2 2-2 3.2" fill="none" stroke="var(--temple-ink)" stroke-width="3.4" stroke-linecap="round"/>
+    <circle cx="32" cy="40.4" r="2.2" fill="var(--chili)"/>
+  </symbol>
+
+  <!-- point at this dish -->
+  <symbol id="i-this" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--gold-soft)"/>
+    <ellipse cx="32" cy="38" rx="21" ry="8" fill="var(--surface)" stroke="var(--temple-ink)" stroke-width="2.4"/>
+    <ellipse cx="32" cy="36" rx="13" ry="5" fill="var(--chili)"/>
+    <path d="M30 10v14" stroke="var(--temple-ink)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M30 24c-3 0-5 2-5 5h12c0-3-2-5-5-5Z" fill="var(--skin)"/>
+    <path d="M22 26c-3 1-4 3-3 6l2 5h16v-8Z" fill="var(--skin)"/>
+  </symbol>
+
+  <!-- coins -->
+  <symbol id="i-coins" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--gold-soft)"/>
+    <ellipse cx="32" cy="46" rx="18" ry="7" fill="var(--gold)"/>
+    <ellipse cx="32" cy="38" rx="18" ry="7" fill="#e8c05d" stroke="var(--gold)" stroke-width="2"/>
+    <ellipse cx="32" cy="30" rx="18" ry="7" fill="#f0d386" stroke="var(--gold)" stroke-width="2"/>
+    <path d="M28 27h6a3 3 0 0 1 0 6h-6m2 0v4m-2-10v10" stroke="var(--temple-ink)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- price tag -->
+  <symbol id="i-tag" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#dff0e6"/>
+    <path d="M34 12H52v18L28 54 10 36Z" fill="var(--jade)" stroke="var(--temple-ink)" stroke-width="2.4"/>
+    <circle cx="43" cy="21" r="4" fill="var(--surface)" stroke="var(--temple-ink)" stroke-width="2.4"/>
+    <path d="M22 30l12 12m-6-18 12 12" stroke="rgba(255,255,255,.7)" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- receipt -->
+  <symbol id="i-receipt" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--sunken)"/>
+    <path d="M16 10h32v40l-4-3-4 3-4-3-4 3-4-3-4 3-4-3-4 3Z" fill="var(--surface)" stroke="var(--temple-ink)" stroke-width="2.4"/>
+    <path d="M23 20h18M23 27h18M23 34h11" stroke="var(--muted)" stroke-width="2.6" stroke-linecap="round"/>
+    <circle cx="41" cy="40" r="7" fill="var(--gold)"/>
+    <path d="M38 40h6" stroke="#1d1403" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- shopping bag -->
+  <symbol id="i-bag" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#fbe0ea"/>
+    <path d="M14 22h36l-3 32H17Z" fill="var(--lotus)" stroke="var(--temple-ink)" stroke-width="2.4"/>
+    <path d="M24 24v-5a8 8 0 0 1 16 0v5" fill="none" stroke="var(--temple-ink)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M22 32h20" stroke="rgba(255,255,255,.75)" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- toilet -->
+  <symbol id="i-toilet" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#dbe7f5"/>
+    <rect x="10" y="12" width="44" height="42" rx="4" fill="var(--surface)" stroke="var(--temple-ink)" stroke-width="2.4"/>
+    <path d="M32 14v38" stroke="var(--temple-ink)" stroke-width="2"/>
+    <circle cx="21" cy="24" r="4" fill="#2f5aa8"/>
+    <path d="M21 30c-4 0-6 3-6 7v6h12v-6c0-4-2-7-6-7Z" fill="#2f5aa8"/>
+    <circle cx="43" cy="24" r="4" fill="var(--lotus)"/>
+    <path d="M43 30c-3.4 0-5.4 3-6.4 8l-.6 5h14l-.6-5c-1-5-3-8-6.4-8Z" fill="var(--lotus)"/>
+  </symbol>
+
+  <!-- confused -->
+  <symbol id="i-confused" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--sunken)"/>
+    <circle cx="28" cy="28" r="11" fill="var(--skin)"/>
+    <path d="M28 41c-8 0-13 6-13 14v5h26v-5c0-8-5-14-13-14Z" fill="var(--temple-ink)"/>
+    <path d="M24 28c0 0 1-3 4-3s4 2 4 3" stroke="#2a2016" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M44 14c0-3 2.4-4.6 4.8-4.6S54 11 54 13.8c0 2.4-1.6 3.2-3.2 4.4-1.2.8-1.6 1.6-1.6 2.6" fill="none" stroke="var(--chili)" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="49" cy="24" r="2" fill="var(--chili)"/>
+  </symbol>
+
+  <!-- aspirated: breath -->
+  <symbol id="i-breath" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--gold-soft)"/>
+    <path d="M10 44c0-14 8-24 18-24 4 0 7 2 7 6s-3 6-7 6c-2 0-3-1-3-2" fill="none" stroke="var(--temple-ink)" stroke-width="3.4" stroke-linecap="round"/>
+    <path d="M38 22c5 0 9 2 12 4m-12 4c5 0 10 2 14 5m-14 5c4 0 8 1 11 3" fill="none" stroke="var(--chili)" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- unaspirated -->
+  <symbol id="i-hold" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#dff0e6"/>
+    <path d="M10 44c0-14 8-24 18-24 4 0 7 2 7 6s-3 6-7 6c-2 0-3-1-3-2" fill="none" stroke="var(--temple-ink)" stroke-width="3.4" stroke-linecap="round"/>
+    <circle cx="45" cy="30" r="11" fill="none" stroke="var(--jade)" stroke-width="4"/>
+    <path d="M37 38 53 22" stroke="var(--jade)" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- letter block -->
+  <symbol id="i-letters" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--gold-soft)"/>
+    <rect x="8" y="22" width="16" height="16" rx="3" fill="var(--temple-ink)"/>
+    <rect x="26" y="14" width="12" height="12" rx="3" fill="var(--chili)"/>
+    <rect x="26" y="30" width="12" height="12" rx="3" fill="var(--gold)"/>
+    <rect x="40" y="22" width="16" height="16" rx="3" fill="var(--jade)"/>
+    <path d="M14 46h36" stroke="var(--temple-ink)" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- game: pick a card -->
+  <symbol id="i-pick" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--gold-soft)"/>
+    <rect x="10" y="22" width="20" height="28" rx="3" fill="var(--surface)" stroke="var(--temple-ink)" stroke-width="2.4" transform="rotate(-9 20 36)"/>
+    <rect x="24" y="16" width="20" height="28" rx="3" fill="var(--surface)" stroke="var(--temple-ink)" stroke-width="2.4" transform="rotate(7 34 30)"/>
+    <path d="M30 24h9M30 30h9M30 36h6" stroke="var(--muted)" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M46 42c-3 0-5 2-5 5h12c0-3-2-5-5-5Z" fill="var(--skin)"/>
+    <path d="M48 28v14" stroke="var(--temple-ink)" stroke-width="3.6" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- game: sort -->
+  <symbol id="i-sort" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#dff0e6"/>
+    <rect x="6" y="26" width="15" height="20" rx="3" fill="var(--surface)" stroke="var(--temple-ink)" stroke-width="2.2"/>
+    <rect x="24" y="26" width="15" height="20" rx="3" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="2.2"/>
+    <rect x="42" y="26" width="15" height="20" rx="3" fill="var(--surface)" stroke="var(--temple-ink)" stroke-width="2.2"/>
+    <path d="M16 18h14" stroke="var(--jade)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M27 14l5 4-5 4Z" fill="var(--jade)"/>
+    <path d="M48 18H34" stroke="var(--chili)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M37 22l-5-4 5-4Z" fill="var(--chili)"/>
+  </symbol>
+
+  <!-- game: staff check -->
+  <symbol id="i-check" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#dbe7f5"/>
+    <circle cx="25" cy="22" r="9" fill="var(--skin)"/>
+    <path d="M25 33c-9 0-15 7-15 16v5h30v-5c0-9-6-16-15-16Z" fill="var(--temple-ink)"/>
+    <rect x="20" y="36" width="10" height="7" rx="2" fill="var(--gold)"/>
+    <circle cx="47" cy="44" r="13" fill="var(--jade)"/>
+    <path d="M41 44l5 5 8-9" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- game: gift -->
+  <symbol id="i-gift" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#fbe0ea"/>
+    <rect x="12" y="28" width="40" height="26" rx="3" fill="var(--chili)"/>
+    <rect x="9" y="20" width="46" height="10" rx="3" fill="#e4573c"/>
+    <rect x="28" y="20" width="8" height="34" fill="var(--gold)"/>
+    <path d="M32 20c-6-10-16-6-12 0Zm0 0c6-10 16-6 12 0Z" fill="var(--gold)"/>
+  </symbol>
+
+  <!-- tuk tuk -->
+  <symbol id="i-tuktuk" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--gold-soft)"/>
+    <path d="M20 24h26l6 10v12H14V34Z" fill="var(--chili)"/>
+    <path d="M22 18h22l2 6H20Z" fill="var(--gold)"/>
+    <rect x="24" y="30" width="12" height="9" rx="2" fill="#cfe8ea"/>
+    <circle cx="20" cy="48" r="6" fill="var(--temple-ink)"/><circle cx="20" cy="48" r="2.2" fill="#cfe8ea"/>
+    <circle cx="45" cy="48" r="6" fill="var(--temple-ink)"/><circle cx="45" cy="48" r="2.2" fill="#cfe8ea"/>
+    <circle cx="52" cy="38" r="2.6" fill="var(--gold)"/>
+  </symbol>
+
+  <!-- elephant -->
+  <symbol id="i-elephant" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#dff0e6"/>
+    <path d="M18 24c0-7 7-12 15-12s15 5 15 12v12c0 3-2 5-5 5h-2v8h-6v-8H29v8h-6v-8c-3 0-5-2-5-5Z" fill="#8b9ba4"/>
+    <path d="M18 26c-5 0-7 6-6 11 1 4 5 6 7 4 1.6-1.6-1-3.4-1-6 0-3 2-4 2-6Z" fill="#7c8c95"/>
+    <path d="M44 34c0 6 3 8 3 12 0 3-3 5-6 4s-3-4-1-6c1.6-1.6 1-5 1-10Z" fill="#7c8c95"/>
+    <circle cx="26" cy="24" r="2.4" fill="#2c3a40"/>
+    <path d="M36 14c4-4 10-4 12 0" stroke="var(--lotus)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- lotus -->
+  <symbol id="i-lotus" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#fbe0ea"/>
+    <path d="M32 14c5 6 7 13 7 20H25c0-7 2-14 7-20Z" fill="var(--lotus)"/>
+    <path d="M14 24c7 2 12 6 15 11-6 3-13 2-18-2Z" fill="#e894b1"/>
+    <path d="M50 24c-7 2-12 6-15 11 6 3 13 2 18-2Z" fill="#e894b1"/>
+    <path d="M10 36h44c-4 8-12 12-22 12s-18-4-22-12Z" fill="var(--jade)"/>
+  </symbol>
+
+  <!-- noodles -->
+  <symbol id="i-noodle" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--gold-soft)"/>
+    <ellipse cx="32" cy="40" rx="22" ry="9" fill="var(--surface)" stroke="var(--temple-ink)" stroke-width="2.4"/>
+    <path d="M16 38c4-8 10-12 16-12s12 4 16 12Z" fill="#e8b94f"/>
+    <path d="M22 34c3-4 6-6 10-6m-6 8c3-5 7-7 12-7" stroke="#c8911f" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="28" cy="32" r="2.6" fill="var(--chili)"/><circle cx="38" cy="33" r="2.6" fill="var(--jade)"/>
+  </symbol>
+
+  <!-- tom yum -->
+  <symbol id="i-tomyum" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="var(--chili-soft)"/>
+    <path d="M12 32h40c0 11-9 18-20 18s-20-7-20-18Z" fill="var(--surface)" stroke="var(--temple-ink)" stroke-width="2.4"/>
+    <path d="M15 34h34c-1 7-7 11-17 11s-16-4-17-11Z" fill="#e0543a"/>
+    <path d="M24 36c3-2 6-2 8 1 2-3 5-3 8-1-2 4-5 5-8 4-3 1-6 0-8-4Z" fill="#f4a07e"/>
+    <path d="M26 20c0-3 2-4 2-7m8 7c0-3 2-4 2-7" stroke="var(--water)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- mango sticky rice -->
+  <symbol id="i-mango" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#dff0e6"/>
+    <ellipse cx="32" cy="42" rx="22" ry="8" fill="var(--surface)" stroke="var(--temple-ink)" stroke-width="2.4"/>
+    <path d="M14 38c2-6 6-9 11-9s9 3 11 9Z" fill="#fdfcf4" stroke="var(--line)" stroke-width="1.6"/>
+    <path d="M36 38c1-7 5-12 11-12 3 0 5 2 5 5 0 4-5 7-16 7Z" fill="#e8a81f"/>
+    <path d="M40 34c3-4 6-5 9-5" stroke="#c8911f" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- temple prang -->
+  <symbol id="i-temple" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#dbe7f5"/>
+    <path d="M32 6 36 18H28Z" fill="var(--gold)"/>
+    <path d="M32 16 42 32H22Z" fill="#e9dfc4" stroke="var(--temple-ink)" stroke-width="2"/>
+    <path d="M32 28 48 48H16Z" fill="#f2e9d2" stroke="var(--temple-ink)" stroke-width="2"/>
+    <rect x="14" y="46" width="36" height="10" fill="var(--temple-ink)"/>
+    <rect x="29" y="48" width="6" height="8" fill="var(--gold)"/>
+  </symbol>
+</svg>
+
+<!-- ============ NAV ============ -->
+<nav class="topbar" aria-label="セクション">
+  <div class="inner">
+    <span class="brand">ภาษาไทย</span>
+    <a href="#greet">あいさつ</a>
+    <a href="#order">語順</a>
+    <a href="#negate">否定・疑問</a>
+    <a href="#food">レストラン</a>
+    <a href="#travel">旅行</a>
+    <a href="#letters">文字</a>
+    <a href="#game">ゲーム</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero band">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-kicker"><svg viewBox="0 0 30 20" aria-hidden="true"><use href="#i-flag"/></svg>タイの公用語</span>
+        <h1>タイでよく使う表現</h1>
+        <p class="thai-wordmark">ภาษาไทยง่าย ๆ</p>
+        <p class="lead">タイ語を見て、読んで、使ってみよう。あいさつから屋台での注文まで、このブースで本当に使えるフレーズだけを集めました。</p>
+        <div class="hero-stats">
+          <span>フレーズ 17</span>
+          <span>声調 5種類</span>
+          <span>並び替えゲームつき</span>
+        </div>
+      </div>
+      <div>
+        <svg class="scene-hero" viewBox="0 0 420 260" role="img" aria-label="チャオプラヤー川に建つ寺院と、ロングテールボートの風景">
+          <rect width="420" height="260" fill="var(--sky)"/>
+          <circle cx="332" cy="58" r="30" fill="var(--gold)" opacity=".85"/>
+          <circle cx="332" cy="58" r="42" fill="var(--gold)" opacity=".18"/>
+          <!-- distant skyline -->
+          <path d="M0 176h420v20H0Z" fill="#9ec9cb" opacity=".5"/>
+          <g fill="#6fa6a9" opacity=".55">
+            <rect x="20" y="146" width="18" height="32"/><rect x="44" y="156" width="14" height="22"/>
+            <rect x="366" y="150" width="16" height="28"/><rect x="388" y="160" width="14" height="18"/>
+          </g>
+          <!-- main prang -->
+          <g>
+            <path d="M150 34l6 20h-12Z" fill="var(--gold)"/>
+            <path d="M150 50l16 30h-32Z" fill="#efe4c6" stroke="#b9a87c" stroke-width="2"/>
+            <path d="M150 72l26 44h-52Z" fill="#f6eed9" stroke="#b9a87c" stroke-width="2"/>
+            <path d="M150 104l36 56h-72Z" fill="#fbf6e8" stroke="#b9a87c" stroke-width="2"/>
+            <rect x="110" y="158" width="80" height="20" fill="#e2d6b4" stroke="#b9a87c" stroke-width="2"/>
+            <rect x="143" y="162" width="14" height="16" fill="var(--temple)"/>
+            <path d="M126 150l6-10 6 10Zm30 0 6-10 6 10Z" fill="var(--gold)"/>
+          </g>
+          <!-- side pavilion -->
+          <g>
+            <path d="M236 110h66l-10-16h-46Z" fill="var(--chili)"/>
+            <path d="M226 112h86l-10 10h-66Z" fill="#e4573c"/>
+            <path d="M241 122h56v38h-56Z" fill="#fbf6e8" stroke="#b9a87c" stroke-width="2"/>
+            <rect x="262" y="134" width="14" height="26" fill="var(--temple)"/>
+            <path d="M269 82l3 12h-6Z" fill="var(--gold)"/>
+            <rect x="265" y="94" width="8" height="8" fill="var(--gold)"/>
+            <rect x="226" y="158" width="86" height="20" fill="#e2d6b4" stroke="#b9a87c" stroke-width="2"/>
+          </g>
+          <!-- palms -->
+          <g>
+            <path d="M58 178V128" stroke="#7a6240" stroke-width="6" stroke-linecap="round"/>
+            <path d="M58 128c-14-4-22 2-26 10 10-2 16 0 20 4m6-14c14-4 22 2 26 10-10-2-16 0-20 4m-6-14c-4-12 0-20 8-24-2 10 0 16 2 20m-2 4c6-10 14-12 22-8-8 4-12 10-14 14" fill="#2c8c6c"/>
+            <circle cx="58" cy="126" r="5" fill="var(--gold)"/>
+          </g>
+          <g>
+            <path d="M356 178v-42" stroke="#7a6240" stroke-width="5" stroke-linecap="round"/>
+            <path d="M356 136c-12-4-18 0-22 8 8-2 14 0 18 3m4-11c12-4 18 0 22 8-8-2-14 0-18 3m-4-11c-3-10 0-17 7-20-2 8 0 14 1 17" fill="#2c8c6c"/>
+          </g>
+          <!-- water -->
+          <rect y="178" width="420" height="82" fill="var(--water)"/>
+          <path d="M0 192h420v6H0Zm0 18h420v5H0Zm0 17h420v4H0Z" fill="#fff" opacity=".22"/>
+          <!-- long-tail boat -->
+          <g>
+            <path d="M150 226h96l-14 16h-74Z" fill="#b8442f"/>
+            <path d="M160 226h78l-4-10h-70Z" fill="#f0c84f"/>
+            <rect x="176" y="204" width="46" height="12" rx="3" fill="#f6eede"/>
+            <path d="M246 228l34-14-4 10 10 2-40 10Z" fill="#6a5133"/>
+            <path d="M172 204h54v-4h-54Z" fill="var(--chili)"/>
+            <circle cx="190" cy="198" r="4" fill="var(--skin)"/>
+            <circle cx="210" cy="198" r="4" fill="var(--skin)"/>
+          </g>
+          <!-- birds -->
+          <g fill="none" stroke="#3c6f72" stroke-width="2.4" stroke-linecap="round">
+            <path d="M72 56c4-4 7-4 10 0m2 0c3-4 6-4 9 0"/>
+            <path d="M108 38c3-3 6-3 8 0m2 0c3-3 5-3 8 0"/>
+          </g>
+          <!-- lotus pads -->
+          <g>
+            <ellipse cx="46" cy="238" rx="18" ry="7" fill="#2c8c6c"/>
+            <ellipse cx="78" cy="250" rx="14" ry="6" fill="#247a5d"/>
+            <path d="M46 232c3 3 4 7 4 10H40c0-3 1-7 4-10Z" fill="var(--lotus)"/>
+            <ellipse cx="376" cy="244" rx="20" ry="8" fill="#2c8c6c"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <svg class="divider" viewBox="0 0 120 11" preserveAspectRatio="none" aria-hidden="true"><rect width="120" height="11" fill="url(#pat-roof)"/></svg>
+</header>
+
+<!-- ============ 1. GREETINGS ============ -->
+<section class="band" id="greet">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="row"><span class="num">1</span><span class="eyebrow">ทักทาย</span></div>
+      <h2>タイ語の基本とあいさつ</h2>
+      <p class="lead">まずはこの3つ。語尾に「ครับ／ค่ะ」をつけるだけで、ぐっと丁寧になります。</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="手を合わせてあいさつする人（ワイ）"><use href="#i-wai"/></svg></div>
+        <p class="thai">สวัสดี</p>
+        <p class="kata">サワッディー</p>
+        <p class="mean">こんにちは</p>
+        <div class="gloss"><span class="chip">朝も昼も夜もOK</span><span class="chip">合掌（ワイ）と一緒に</span></div>
+      </article>
+
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="両手でハートを差し出す、感謝のしぐさ"><use href="#i-thanks"/></svg></div>
+        <p class="thai">ขอบคุณ</p>
+        <p class="kata">コープクン</p>
+        <p class="mean">ありがとう</p>
+        <div class="gloss"><span class="chip"><b>ขอบคุณครับ</b> ＝ ありがとうございます（男）</span></div>
+      </article>
+
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="頭を下げてあやまる人"><use href="#i-sorry"/></svg></div>
+        <p class="thai">ขอโทษ</p>
+        <p class="kata">コートート</p>
+        <p class="mean">すみません / ごめんなさい</p>
+        <div class="gloss"><span class="chip">人を呼びとめるときにも使える</span></div>
+      </article>
+    </div>
+
+    <div class="callout">
+      <span class="tab">ครับ・ค่ะ で丁寧に</span>
+      <div class="compare">
+        <div class="side">
+          <h3><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-male"/></svg>男性が使う語尾</h3>
+          <p class="thai">ครับ</p>
+          <p class="kata">クラップ</p>
+          <ul><li>文末につけるだけ</li><li>「はい」の返事としても使える</li></ul>
+        </div>
+        <div class="side">
+          <h3><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-female"/></svg>女性が使う語尾</h3>
+          <p class="thai">ค่ะ</p>
+          <p class="kata">カ</p>
+          <ul><li>文末につけるだけ</li><li>質問のときは <b style="font-family:var(--font-thai)">คะ</b>（カ↗）</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="background:var(--surface);border-color:var(--line)">
+      <span class="tab" style="background:var(--temple);color:var(--on-temple)">タイ語のここが面白い</span>
+      <div class="compare">
+        <div class="side" style="background:var(--sunken)">
+          <h3><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-tone"/></svg>声調で意味が変わる</h3>
+          <p style="color:var(--muted);font-size:.92rem">音の上がり下がり（声調）は5種類。同じ「マー」でも、上げ下げを変えると「来る・馬・犬」など別の意味になります。</p>
+        </div>
+        <div class="side" style="background:var(--sunken)">
+          <h3><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-temple"/></svg>スペースがない</h3>
+          <p style="color:var(--muted);font-size:.92rem">タイ語は単語の間を空けずに書きます。文の区切りにだけスペースを入れるので、慣れると読むのが楽しくなります。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. WORD ORDER ============ -->
+<section class="band band--sunken" id="order">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="row"><span class="num">2</span><span class="eyebrow">เรียงประโยค</span></div>
+      <h2>タイ語の語順と文のしくみ</h2>
+      <p class="lead">語順は英語と同じ「S＋V＋O」。動詞の形が変わらないので、単語を順番に置くだけで文になります。</p>
+    </div>
+
+    <div class="svo">
+      <div class="slot">
+        <span class="role">主語 S</span>
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="話し手の女性"><use href="#i-female"/></svg></div>
+        <p class="thai">ฉัน</p>
+        <p class="kata">チャン</p>
+        <p class="jp">私</p>
+      </div>
+      <div class="slot">
+        <span class="role">動詞 V</span>
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="ご飯の茶碗"><use href="#i-rice"/></svg></div>
+        <p class="thai">กิน</p>
+        <p class="kata">キン</p>
+        <p class="jp">食べる</p>
+      </div>
+      <div class="slot">
+        <span class="role">目的語 O</span>
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="マンゴーともち米のデザート"><use href="#i-mango"/></svg></div>
+        <p class="thai">ข้าว</p>
+        <p class="kata">カーオ</p>
+        <p class="jp">ご飯</p>
+      </div>
+    </div>
+
+    <div class="whole">
+      <p class="thai">ฉันกินข้าว</p>
+      <p class="kata" style="color:var(--gold)">チャン・キン・カーオ</p>
+      <p style="font-weight:700">私はご飯を食べます</p>
+      <p class="en">英語の I eat rice とまったく同じ並び</p>
+    </div>
+
+    <div class="callout">
+      <span class="tab">やってみよう</span>
+      <p style="font-weight:700">「私は猫が好きです」をタイ語にしてみましょう。</p>
+      <div class="cards" style="margin-top:14px">
+        <article class="card" style="background:var(--surface)">
+          <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="話し手の女性"><use href="#i-female"/></svg></div>
+          <p class="thai">ฉัน</p><p class="kata">チャン</p><p class="mean">私（S）</p>
+        </article>
+        <article class="card" style="background:var(--surface)">
+          <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="ピンクのハート"><use href="#i-like"/></svg></div>
+          <p class="thai">ชอบ</p><p class="kata">チョープ</p><p class="mean">好き（V）</p>
+        </article>
+        <article class="card" style="background:var(--surface)">
+          <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="茶色い猫の顔"><use href="#i-cat"/></svg></div>
+          <p class="thai">แมว</p><p class="kata">メーオ</p><p class="mean">猫（O）</p>
+        </article>
+      </div>
+      <p style="margin-top:14px"><b>こたえ：</b><span class="thai" style="font-size:1.5rem">ฉันชอบแมว</span>（チャン・チョープ・メーオ）</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. NEGATIVE / QUESTION ============ -->
+<section class="band band--temple" id="negate">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="row"><span class="num">3</span><span class="eyebrow">ปฏิเสธ・คำถาม</span></div>
+      <h2>否定文と疑問文の作り方</h2>
+      <p class="lead">覚えるのは2語だけ。置く場所が違うだけで、「〜ない」と「〜ですか？」を作り分けられます。</p>
+    </div>
+
+    <div class="compare">
+      <div class="side" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);color:var(--on-temple)">
+        <h3 style="color:#fff"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-ban"/></svg>① 〜ない（否定）</h3>
+        <p class="thai" style="color:#fff">ไม่</p>
+        <p class="kata">マイ</p>
+        <p style="color:#cfe2d9;font-size:.92rem">動詞の<b>前</b>に置く。発音は下げ調子。</p>
+        <div class="whole" style="background:rgba(0,0,0,.25);margin-top:12px">
+          <p class="thai" style="font-size:1.6rem">ไม่กินเผ็ด</p>
+          <p class="kata" style="color:var(--gold)">マイ・キン・ペット</p>
+          <p style="font-weight:700">辛いものは食べません</p>
+          <div class="gloss" style="justify-content:center">
+            <span class="chip"><b>ไม่</b> 〜ない</span><span class="chip"><b>กิน</b> 食べる</span><span class="chip"><b>เผ็ด</b> 辛い</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="side" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);color:var(--on-temple)">
+        <h3 style="color:#fff"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-ask"/></svg>② 〜ですか？（疑問）</h3>
+        <p class="thai" style="color:#fff">ไหม</p>
+        <p class="kata">マイ↗</p>
+        <p style="color:#cfe2d9;font-size:.92rem">文の<b>最後</b>に置いて、語尾を上げる。</p>
+        <div class="whole" style="background:rgba(0,0,0,.25);margin-top:12px">
+          <p class="thai" style="font-size:1.6rem">คุณชอบแมวไหม</p>
+          <p class="kata" style="color:var(--gold)">クン・チョープ・メーオ・マイ↗</p>
+          <p style="font-weight:700">猫が好きですか？</p>
+          <div class="gloss" style="justify-content:center">
+            <span class="chip"><b>คุณ</b> あなた</span><span class="chip"><b>ชอบ</b> 好き</span><span class="chip"><b>แมว</b> 猫</span><span class="chip"><b>ไหม</b> ですか？</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="background:rgba(255,255,255,.08);border-color:var(--gold);color:var(--on-temple)">
+      <span class="tab">2つの「マイ」の違い</span>
+      <p>どちらもカタカナにすると「マイ」ですが、<b style="font-family:var(--font-thai)">ไม่</b> は<b>動詞の前</b>で下げ調子、<b style="font-family:var(--font-thai)">ไหม</b> は<b>文の最後</b>で上げ調子。位置と声調で聞き分けます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. RESTAURANT ============ -->
+<section class="band" id="food">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="row"><span class="num">4</span><span class="eyebrow">ร้านอาหาร</span></div>
+      <h2>レストランで使うタイ語</h2>
+      <p class="lead">指をさして「これください」。あとは辛さの調整とお会計が言えれば、屋台でも困りません。</p>
+    </div>
+
+    <figure class="scene">
+      <svg viewBox="0 0 420 150" role="img" aria-label="パラソルの並ぶ屋台street。麺、トムヤム、果物が並ぶ">
+        <rect width="420" height="150" fill="var(--sky)"/>
+        <rect y="112" width="420" height="38" fill="#c9bfa6"/>
+        <path d="M0 112h420v4H0Z" fill="#a89c80"/>
+        <!-- stall 1 -->
+        <g>
+          <path d="M18 40h104l-10 16H28Z" fill="var(--chili)"/>
+          <path d="M28 56h84v6H28Z" fill="#e4573c"/>
+          <rect x="36" y="62" width="68" height="8" fill="#f6eede"/>
+          <rect x="40" y="70" width="60" height="42" fill="#e2d6b4"/>
+          <rect x="34" y="68" width="72" height="6" fill="#8b7a55"/>
+          <circle cx="56" cy="88" r="9" fill="#fdfcf4" stroke="#8b7a55" stroke-width="2"/>
+          <path d="M48 88h16c0 5-4 7-8 7s-8-2-8-7Z" fill="#e8b94f"/>
+          <circle cx="84" cy="88" r="9" fill="#fdfcf4" stroke="#8b7a55" stroke-width="2"/>
+          <path d="M76 88h16c0 5-4 7-8 7s-8-2-8-7Z" fill="#e0543a"/>
+          <path d="M70 40v-8" stroke="#7a6240" stroke-width="3"/>
+        </g>
+        <!-- stall 2 -->
+        <g>
+          <path d="M160 34h110l-10 16h-90Z" fill="var(--jade)"/>
+          <path d="M170 50h90v6h-90Z" fill="#247a5d"/>
+          <rect x="178" y="56" width="74" height="56" fill="#f2e9d2"/>
+          <rect x="172" y="54" width="86" height="6" fill="#8b7a55"/>
+          <rect x="186" y="66" width="24" height="16" rx="3" fill="#e8a81f"/>
+          <rect x="216" y="66" width="24" height="16" rx="3" fill="#cf3f28"/>
+          <rect x="186" y="88" width="24" height="16" rx="3" fill="#2c8c6c"/>
+          <rect x="216" y="88" width="24" height="16" rx="3" fill="#d9769a"/>
+        </g>
+        <!-- stall 3 -->
+        <g>
+          <path d="M300 44h104l-10 14h-84Z" fill="var(--gold)"/>
+          <path d="M310 58h84v6h-84Z" fill="#b98415"/>
+          <rect x="318" y="64" width="68" height="48" fill="#e9dfc4"/>
+          <rect x="312" y="62" width="80" height="6" fill="#8b7a55"/>
+          <circle cx="336" cy="84" r="8" fill="#e0543a"/>
+          <circle cx="356" cy="84" r="8" fill="#e8b94f"/>
+          <circle cx="376" cy="84" r="8" fill="#2c8c6c"/>
+          <rect x="326" y="96" width="52" height="8" rx="3" fill="#fdfcf4"/>
+        </g>
+        <!-- vendor + customer -->
+        <g>
+          <circle cx="142" cy="78" r="7" fill="var(--skin)"/>
+          <path d="M142 86c-6 0-10 5-10 11v15h20V97c0-6-4-11-10-11Z" fill="#2f5aa8"/>
+        </g>
+        <g>
+          <circle cx="286" cy="80" r="7" fill="var(--skin)"/>
+          <path d="M286 88c-5 0-8 4-9 10l-2 14h22l-2-14c-1-6-4-10-9-10Z" fill="var(--lotus)"/>
+        </g>
+        <!-- scooter silhouette -->
+        <g opacity=".85">
+          <circle cx="36" cy="128" r="8" fill="#3b4a4a"/><circle cx="72" cy="128" r="8" fill="#3b4a4a"/>
+          <path d="M30 124h14l6-12h12l4 12h8" stroke="#3b4a4a" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <figcaption>屋台（ร้านข้างทาง）では、指をさして「เอาอันนี้」が一番はやい。</figcaption>
+    </figure>
+
+    <div class="cards">
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="料理の皿を指さす手"><use href="#i-this"/></svg></div>
+        <p class="thai">เอาอันนี้</p>
+        <p class="kata">アオ・アンニー</p>
+        <p class="mean">これをください</p>
+        <div class="gloss"><span class="chip"><b>เอา</b> 欲しい</span><span class="chip"><b>อันนี้</b> これ</span></div>
+      </article>
+
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="赤唐辛子に禁止マーク"><use href="#i-no-chili"/></svg></div>
+        <p class="thai">ไม่เผ็ด</p>
+        <p class="kata">マイ・ペット</p>
+        <p class="mean">辛くしないでください</p>
+        <div class="gloss"><span class="chip"><b>ไม่</b> 〜ない</span><span class="chip"><b>เผ็ด</b> 辛い</span></div>
+      </article>
+
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="小さな唐辛子ひとつ"><use href="#i-chili-mild"/></svg></div>
+        <p class="thai">เผ็ดน้อย</p>
+        <p class="kata">ペット・ノーイ</p>
+        <p class="mean">辛さ控えめで</p>
+        <div class="gloss"><span class="chip"><b>เผ็ด</b> 辛い</span><span class="chip"><b>น้อย</b> 少ない</span></div>
+      </article>
+
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="唐辛子"><use href="#i-chili"/></svg></div>
+        <p class="thai">ไม่ใส่พริก</p>
+        <p class="kata">マイ・サイ・プリック</p>
+        <p class="mean">唐辛子を入れないで</p>
+        <div class="gloss"><span class="chip"><b>ใส่</b> 入れる</span><span class="chip"><b>พริก</b> 唐辛子</span></div>
+      </article>
+
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="積み重なった金貨"><use href="#i-coins"/></svg></div>
+        <p class="thai">อันนี้เท่าไหร่</p>
+        <p class="kata">アンニー・タオライ</p>
+        <p class="mean">これはいくらですか？</p>
+        <div class="gloss"><span class="chip"><b>อันนี้</b> これ</span><span class="chip"><b>เท่าไหร่</b> いくら</span></div>
+      </article>
+
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="レシートとコイン"><use href="#i-receipt"/></svg></div>
+        <p class="thai">คิดเงินด้วย</p>
+        <p class="kata">キットグン・ドゥアイ</p>
+        <p class="mean">お会計をお願いします</p>
+        <div class="gloss"><span class="chip"><b>คิด</b> 計算</span><span class="chip"><b>เงิน</b> お金</span><span class="chip"><b>ด้วย</b> 〜ください</span></div>
+      </article>
+    </div>
+
+    <div class="callout chili">
+      <span class="tab">辛さの目安</span>
+      <div class="compare" style="margin-top:4px">
+        <div class="side" style="display:grid;gap:6px;justify-items:center;text-align:center">
+          <div class="pic" style="width:60px;height:60px"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-noodle"/></svg></div>
+          <p class="thai" style="font-size:1.4rem">ผัดไทย</p><p class="kata">パッタイ</p><p style="font-size:.88rem;color:var(--muted)">辛くない。はじめの一皿に。</p>
+        </div>
+        <div class="side" style="display:grid;gap:6px;justify-items:center;text-align:center">
+          <div class="pic" style="width:60px;height:60px"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-tomyum"/></svg></div>
+          <p class="thai" style="font-size:1.4rem">ต้มยำ</p><p class="kata">トムヤム</p><p style="font-size:.88rem;color:var(--muted)">酸っぱくて辛い。「เผ็ดน้อย」が使える。</p>
+        </div>
+        <div class="side" style="display:grid;gap:6px;justify-items:center;text-align:center">
+          <div class="pic" style="width:60px;height:60px"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-mango"/></svg></div>
+          <p class="thai" style="font-size:1.4rem">ข้าวเหนียวมะม่วง</p><p class="kata">カーオニャオ・マムアン</p><p style="font-size:.88rem;color:var(--muted)">マンゴーもち米。甘いデザート。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. TRAVEL ============ -->
+<section class="band band--sunken" id="travel">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="row"><span class="num">5</span><span class="eyebrow">เที่ยว</span></div>
+      <h2>旅行で使うタイ語</h2>
+      <p class="lead">街歩きと買い物で出番の多い4フレーズ。値段を聞いて、欲しいものを伝えて、トイレを探せます。</p>
+    </div>
+
+    <figure class="scene">
+      <svg viewBox="0 0 420 150" role="img" aria-label="トゥクトゥクが走る街角。ショップハウス、電線、ヤシの木、象の看板">
+        <rect width="420" height="150" fill="var(--sky)"/>
+        <!-- shophouses -->
+        <g>
+          <rect x="10" y="40" width="74" height="76" fill="#f0e3c8" stroke="#b9a87c" stroke-width="2"/>
+          <rect x="22" y="52" width="20" height="20" fill="#9fc6c8"/><rect x="52" y="52" width="20" height="20" fill="#9fc6c8"/>
+          <rect x="22" y="84" width="50" height="32" fill="#cf3f28"/>
+          <rect x="30" y="94" width="34" height="22" fill="#8c2b1b"/>
+          <rect x="6" y="34" width="82" height="8" fill="var(--jade)"/>
+        </g>
+        <g>
+          <rect x="94" y="28" width="70" height="88" fill="#e8dcc0" stroke="#b9a87c" stroke-width="2"/>
+          <rect x="104" y="40" width="18" height="22" fill="#9fc6c8"/><rect x="132" y="40" width="18" height="22" fill="#9fc6c8"/>
+          <rect x="104" y="72" width="46" height="14" fill="var(--gold)"/>
+          <rect x="104" y="92" width="46" height="24" fill="#8b7a55"/>
+          <rect x="90" y="22" width="78" height="8" fill="var(--chili)"/>
+        </g>
+        <g>
+          <rect x="300" y="36" width="64" height="80" fill="#f0e3c8" stroke="#b9a87c" stroke-width="2"/>
+          <rect x="310" y="48" width="18" height="20" fill="#9fc6c8"/><rect x="336" y="48" width="18" height="20" fill="#9fc6c8"/>
+          <rect x="310" y="80" width="44" height="36" fill="var(--lotus)"/>
+          <rect x="296" y="30" width="72" height="8" fill="var(--temple)"/>
+        </g>
+        <!-- temple roof far -->
+        <g>
+          <path d="M376 56l6 12h-12Z" fill="var(--gold)"/>
+          <path d="M376 66l20 32h-40Z" fill="#fbf6e8" stroke="#b9a87c" stroke-width="2"/>
+          <rect x="358" y="96" width="36" height="20" fill="#e2d6b4"/>
+        </g>
+        <!-- power lines -->
+        <path d="M0 26c70 10 140 10 210 0s140-10 210 0" fill="none" stroke="#5b6a6a" stroke-width="1.6"/>
+        <path d="M0 34c70 10 140 10 210 0s140-10 210 0" fill="none" stroke="#5b6a6a" stroke-width="1.6"/>
+        <!-- street -->
+        <rect y="116" width="420" height="34" fill="#8e9a99"/>
+        <path d="M0 132h40v4H0Zm60 0h40v4H60Zm60 0h40v4h-40Zm60 0h40v4h-40Zm60 0h40v4h-40Zm60 0h40v4h-40Z" fill="#f2efe2" opacity=".8"/>
+        <!-- palm -->
+        <g>
+          <path d="M268 116V62" stroke="#7a6240" stroke-width="6" stroke-linecap="round"/>
+          <path d="M268 62c-16-4-24 2-28 12 12-3 18 0 22 4m6-16c16-4 24 2 28 12-12-3-18 0-22 4m-6-16c-4-13 0-21 9-26-3 11 0 18 2 22" fill="#2c8c6c"/>
+        </g>
+        <!-- tuk tuk -->
+        <g>
+          <path d="M178 86h58l12 18v18h-82V98Z" fill="var(--chili)"/>
+          <path d="M182 76h50l6 10h-62Z" fill="var(--gold)"/>
+          <rect x="190" y="94" width="24" height="14" rx="3" fill="#cfe8ea"/>
+          <rect x="222" y="94" width="20" height="14" rx="3" fill="#cfe8ea"/>
+          <circle cx="178" cy="126" r="10" fill="#2f3b3b"/><circle cx="178" cy="126" r="4" fill="#cfe8ea"/>
+          <circle cx="234" cy="126" r="10" fill="#2f3b3b"/><circle cx="234" cy="126" r="4" fill="#cfe8ea"/>
+          <circle cx="249" cy="108" r="4" fill="var(--gold)"/>
+          <path d="M166 100h-10v10h10Z" fill="#8c2b1b"/>
+        </g>
+        <!-- elephant sign -->
+        <g opacity=".9">
+          <rect x="384" y="74" width="30" height="24" rx="4" fill="var(--surface)" stroke="var(--temple)" stroke-width="2"/>
+          <path d="M392 92v-8c0-4 3-7 7-7s7 3 7 7v8Z" fill="#8b9ba4"/>
+          <path d="M392 86c-3 0-4 3-3 6 1 2 3 2 3 1 0-2-1-2-1-4Z" fill="#7c8c95"/>
+        </g>
+      </svg>
+      <figcaption>街の看板は読めなくても大丈夫。数字と「เท่าไหร่」が分かれば買い物はできる。</figcaption>
+    </figure>
+
+    <div class="cards">
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="値札タグ"><use href="#i-tag"/></svg></div>
+        <p class="thai">ราคาเท่าไหร่</p>
+        <p class="kata">ラーカー・タオライ</p>
+        <p class="mean">値段はいくらですか？</p>
+        <div class="gloss"><span class="chip"><b>ราคา</b> 値段</span><span class="chip"><b>เท่าไหร่</b> いくら</span></div>
+      </article>
+
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="ショッピングバッグ"><use href="#i-bag"/></svg></div>
+        <p class="thai">อยากได้อันนี้</p>
+        <p class="kata">ヤーク・ダイ・アンニー</p>
+        <p class="mean">これがほしいです</p>
+        <div class="gloss"><span class="chip"><b>อยากได้</b> 欲しい</span><span class="chip"><b>อันนี้</b> これ</span></div>
+      </article>
+
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="トイレのピクトグラム"><use href="#i-toilet"/></svg></div>
+        <p class="thai">ห้องน้ำอยู่ที่ไหน</p>
+        <p class="kata">ホンナーム・ユー・ティーナイ</p>
+        <p class="mean">トイレはどこですか？</p>
+        <div class="gloss"><span class="chip"><b>ห้องน้ำ</b> トイレ</span><span class="chip"><b>อยู่</b> ある</span><span class="chip"><b>ที่ไหน</b> どこ</span></div>
+      </article>
+
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="困った顔と疑問符"><use href="#i-confused"/></svg></div>
+        <p class="thai">ไม่เข้าใจ</p>
+        <p class="kata">マイ・カオチャイ</p>
+        <p class="mean">わかりません</p>
+        <div class="gloss"><span class="chip"><b>ไม่</b> 〜ない</span><span class="chip"><b>เข้าใจ</b> わかる</span></div>
+      </article>
+    </div>
+
+    <div class="callout">
+      <span class="tab">移動のことば</span>
+      <div class="compare" style="margin-top:4px">
+        <div class="side" style="display:grid;gap:6px;justify-items:center;text-align:center">
+          <div class="pic" style="width:60px;height:60px"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-tuktuk"/></svg></div>
+          <p class="thai" style="font-size:1.4rem">ตุ๊กตุ๊ก</p><p class="kata">トゥクトゥク</p><p style="font-size:.88rem;color:var(--muted)">乗る前に値段を決めるのがコツ。</p>
+        </div>
+        <div class="side" style="display:grid;gap:6px;justify-items:center;text-align:center">
+          <div class="pic" style="width:60px;height:60px"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-elephant"/></svg></div>
+          <p class="thai" style="font-size:1.4rem">ช้าง</p><p class="kata">チャーン</p><p style="font-size:.88rem;color:var(--muted)">タイの国の象徴になっている動物。</p>
+        </div>
+        <div class="side" style="display:grid;gap:6px;justify-items:center;text-align:center">
+          <div class="pic" style="width:60px;height:60px"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-lotus"/></svg></div>
+          <p class="thai" style="font-size:1.4rem">ดอกบัว</p><p class="kata">ドークブア</p><p style="font-size:.88rem;color:var(--muted)">蓮の花。お寺にお供えする花。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. LETTERS ============ -->
+<section class="band" id="letters">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="row"><span class="num">6</span><span class="eyebrow">ตัวอักษร</span></div>
+      <h2>タイ語の文字のしくみ</h2>
+      <p class="lead">タイ文字は「子音＋母音＋末子音」のパーツを組み合わせて読みます。ブロックを合体させる感覚です。</p>
+    </div>
+
+    <div class="builder">
+      <div class="glyph"><span class="g">ก</span><span class="t">子音 カ</span></div>
+      <span class="op">＋</span>
+      <div class="glyph"><span class="g">ิ</span><span class="t">母音 イ</span></div>
+      <span class="op">＋</span>
+      <div class="glyph"><span class="g">น</span><span class="t">末子音 ン</span></div>
+      <span class="op">＝</span>
+      <div class="glyph result"><span class="g">กิน</span><span class="t">ギン＝食べる</span></div>
+    </div>
+
+    <div class="callout" style="background:var(--surface);border-color:var(--line)">
+      <span class="tab" style="background:var(--temple);color:var(--on-temple)">同じ音に見えて文字が違う？</span>
+      <p style="color:var(--muted)">タイ語には似た音を表す文字が複数あります。息を出すか出さないかで、別の文字になります。</p>
+      <div class="compare" style="margin-top:14px">
+        <div class="side" style="background:var(--sunken)">
+          <h3><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-hold"/></svg>無気音</h3>
+          <p class="thai" style="font-size:2.6rem">ก</p>
+          <p class="kata">カ</p>
+          <p style="font-size:.92rem;color:var(--muted)">息を出さない「カ」。日本語の「が」に近い音。</p>
+        </div>
+        <div class="side" style="background:var(--sunken)">
+          <h3><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#i-breath"/></svg>有気音</h3>
+          <p class="thai" style="font-size:2.6rem">ข / ค</p>
+          <p class="kata">カー</p>
+          <p style="font-size:.92rem;color:var(--muted)">息を強く吐き出す「カー」。手をかざすと風を感じます。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards" style="margin-top:clamp(20px,3vw,28px)">
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="色分けされた文字ブロック"><use href="#i-letters"/></svg></div>
+        <p class="mean">子音は44文字</p>
+        <p style="font-size:.92rem;color:var(--muted)">それぞれに「ก ไก่（ニワトリのコー）」のような覚え歌の名前がついています。</p>
+      </article>
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="上下に波打つ矢印"><use href="#i-tone"/></svg></div>
+        <p class="mean">声調記号は4つ</p>
+        <p style="font-size:.92rem;color:var(--muted)">文字の上に付く小さな記号（<b style="font-family:var(--font-thai)">่ ้ ๊ ๋</b>）が音の高さを決めます。</p>
+      </article>
+      <article class="card">
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="寺院の塔"><use href="#i-temple"/></svg></div>
+        <p class="mean">母音は前後上下につく</p>
+        <p style="font-size:.92rem;color:var(--muted)">子音の右だけでなく、左・上・下にも母音が置かれます。<b style="font-family:var(--font-thai)">ไทย</b> の <b style="font-family:var(--font-thai)">ไ</b> は左側の母音。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. GAME ============ -->
+<section class="band band--sunken" id="game">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="row"><span class="num">7</span><span class="eyebrow">เกม</span></div>
+      <h2>タイ語・並び替えゲームに挑戦しよう！</h2>
+      <p class="lead">テーブルのカードを並べ替えて、タイ語の文を作るゲームです。まずは画面で練習してみてください。</p>
+    </div>
+
+    <div class="game">
+      <div class="game-top">
+        <p class="game-q" id="q-text">　</p>
+        <p class="game-count" id="q-count">　</p>
+      </div>
+      <div class="slots" id="slots" aria-live="polite" aria-label="並べた単語"></div>
+      <div class="pool" id="pool" aria-label="単語カード"></div>
+      <div class="game-actions">
+        <button class="btn" type="button" id="btn-check">こたえあわせ</button>
+        <button class="btn ghost" type="button" id="btn-reset">やりなおす</button>
+        <button class="btn ghost" type="button" id="btn-next" hidden>次の問題へ</button>
+      </div>
+      <p class="verdict" id="verdict" role="status">　</p>
+    </div>
+
+    <div class="steps" style="margin-top:clamp(22px,3vw,32px)">
+      <article class="step">
+        <span class="no">๑</span>
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="問題カードを選ぶ手"><use href="#i-pick"/></svg></div>
+        <h3>好きな問題カードを選ぶ</h3>
+        <p>テーブルの上にある問題カード（日本語の意味が書いてあります）を1つ選びます。</p>
+      </article>
+      <article class="step">
+        <span class="no">๒</span>
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="カードを左右に並べ替える"><use href="#i-sort"/></svg></div>
+        <h3>単語カードを並べ替える</h3>
+        <p>選んだカードのセットから単語カードを出して、正しい順番に並べ替えます。</p>
+      </article>
+      <article class="step">
+        <span class="no">๓</span>
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="スタッフがチェックする"><use href="#i-check"/></svg></div>
+        <h3>スタッフを呼んでチェック</h3>
+        <p>並べ終わったら、スタッフに「できました！」と声をかけてチェックしてもらおう。</p>
+      </article>
+      <article class="step">
+        <span class="no">๔</span>
+        <div class="pic"><svg viewBox="0 0 64 64" role="img" aria-label="リボンのかかったプレゼント"><use href="#i-gift"/></svg></div>
+        <h3>正解したらプレゼント！</h3>
+        <p>ぜんぶ正解できたらクリア。おつかれさまでした！</p>
+      </article>
+    </div>
+
+    <div class="callout">
+      <span class="tab">ヒント</span>
+      <p>タイ語の基本は「<b>誰が（S）＋ 何する（V）＋ 何を（O）</b>」。否定の <b style="font-family:var(--font-thai)">ไม่</b> は動詞の前、疑問の <b style="font-family:var(--font-thai)">ไหม</b> は文の最後です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="band band--temple">
+  <svg class="divider" viewBox="0 0 120 11" preserveAspectRatio="none" aria-hidden="true"><rect width="120" height="11" fill="url(#pat-roof)"/></svg>
+  <div class="wrap">
+    <p class="thai">ขอบคุณครับ / ค่ะ</p>
+    <p style="font-weight:700;color:#fff">来てくれてありがとう！</p>
+    <p>覚えたフレーズを1つでも声に出してみてください。それがタイ語のはじまりです。</p>
+  </div>
+  <svg class="scene-footer" viewBox="0 0 420 120" role="img" aria-label="夕暮れの川辺に象と蓮の花、ロングテールボートが並ぶ風景">
+    <rect width="420" height="120" fill="var(--temple)"/>
+    <circle cx="210" cy="86" r="46" fill="var(--gold)" opacity=".22"/>
+    <circle cx="210" cy="92" r="28" fill="var(--gold)" opacity=".5"/>
+    <g fill="#0a2a27">
+      <!-- palms -->
+      <path d="M46 104V62" stroke="#0a2a27" stroke-width="5" stroke-linecap="round"/>
+      <path d="M46 62c-13-4-20 1-23 10 10-3 15 0 18 3m5-13c13-4 20 1 23 10-10-3-15 0-18 3m-5-13c-3-11 0-17 7-21-2 9 0 15 1 18"/>
+      <path d="M372 104V70" stroke="#0a2a27" stroke-width="4" stroke-linecap="round"/>
+      <path d="M372 70c-11-3-16 1-19 8 8-2 12 0 15 2m4-10c11-3 16 1 19 8-8-2-12 0-15 2"/>
+      <!-- elephants -->
+      <path d="M116 104V84c0-9 8-15 18-15s18 6 18 15v20h-6v-8h-24v8Z"/>
+      <path d="M116 86c-7 0-9 8-7 14 1 4 6 5 7 3 1-2-2-4-2-7 0-4 2-6 2-10Z"/>
+      <path d="M150 90c0 7 3 9 3 13 0 3-3 4-5 3s-2-4 0-6c1-2 1-6 1-10Z"/>
+      <path d="M268 104V88c0-7 6-12 14-12s14 5 14 12v16h-5v-6h-18v6Z"/>
+      <path d="M268 90c-6 0-7 6-6 11 1 3 5 4 6 2 1-2-2-3-2-5 0-3 2-5 2-8Z"/>
+      <!-- boat -->
+      <path d="M186 100h56l-8 8h-42Z"/>
+      <path d="M242 101l22-8-3 6 7 1-26 6Z"/>
+      <rect x="202" y="88" width="26" height="8" rx="2"/>
+      <!-- lotus -->
+      <path d="M332 104c0-6 5-10 11-10s11 4 11 10Z"/>
+      <path d="M343 94c3 3 4 6 4 9h-8c0-3 1-6 4-9Z"/>
+    </g>
+    <rect y="104" width="420" height="16" fill="#061614"/>
+  </svg>
+</footer>
+
+<script>
+(function(){
+  var ROUNDS = [
+    {jp:'私はご飯を食べます', ans:[{t:'ฉัน',k:'チャン'},{t:'กิน',k:'キン'},{t:'ข้าว',k:'カーオ'}]},
+    {jp:'私は猫が好きです', ans:[{t:'ฉัน',k:'チャン'},{t:'ชอบ',k:'チョープ'},{t:'แมว',k:'メーオ'}]},
+    {jp:'辛いものは食べません', ans:[{t:'ไม่',k:'マイ'},{t:'กิน',k:'キン'},{t:'เผ็ด',k:'ペット'}]},
+    {jp:'猫が好きですか？', ans:[{t:'คุณ',k:'クン'},{t:'ชอบ',k:'チョープ'},{t:'แมว',k:'メーオ'},{t:'ไหม',k:'マイ'}]}
+  ];
+  var slotsEl = document.getElementById('slots');
+  var poolEl = document.getElementById('pool');
+  var qText = document.getElementById('q-text');
+  var qCount = document.getElementById('q-count');
+  var verdict = document.getElementById('verdict');
+  var btnCheck = document.getElementById('btn-check');
+  var btnReset = document.getElementById('btn-reset');
+  var btnNext = document.getElementById('btn-next');
+  var round = 0, pool = [], placed = [];
+
+  function shuffle(a){
+    var arr = a.slice();
+    for (var i = arr.length - 1; i > 0; i--){
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    // avoid handing out the finished sentence
+    var same = arr.every(function(w, i){ return w.t === a[i].t; });
+    if (same && arr.length > 1){ var x = arr[0]; arr[0] = arr[1]; arr[1] = x; }
+    return arr;
+  }
+
+  function chip(w, cls){
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'word' + (cls ? ' ' + cls : '');
+    b.appendChild(document.createTextNode(w.t));
+    var s = document.createElement('small');
+    s.textContent = w.k;
+    b.appendChild(s);
+    return b;
+  }
+
+  function render(){
+    var r = ROUNDS[round];
+    qText.textContent = '「' + r.jp + '」をタイ語にならべよう';
+    qCount.textContent = '問題 ' + (round + 1) + ' / ' + ROUNDS.length;
+    slotsEl.textContent = '';
+    placed.forEach(function(w, i){
+      var b = chip(w, 'placed');
+      b.setAttribute('aria-label', (i + 1) + '番目 ' + w.k + '。タップでもどす');
+      b.addEventListener('click', function(){
+        pool.push(placed.splice(i, 1)[0]);
+        verdict.textContent = '　'; verdict.className = 'verdict';
+        render();
+      });
+      slotsEl.appendChild(b);
+    });
+    poolEl.textContent = '';
+    pool.forEach(function(w, i){
+      var b = chip(w);
+      b.setAttribute('aria-label', w.k + '。タップでならべる');
+      b.addEventListener('click', function(){
+        placed.push(pool.splice(i, 1)[0]);
+        verdict.textContent = '　'; verdict.className = 'verdict';
+        render();
+      });
+      poolEl.appendChild(b);
+    });
+  }
+
+  function start(){
+    pool = shuffle(ROUNDS[round].ans);
+    placed = [];
+    verdict.textContent = '　'; verdict.className = 'verdict';
+    btnNext.hidden = true;
+    render();
+  }
+
+  btnCheck.addEventListener('click', function(){
+    var ans = ROUNDS[round].ans;
+    if (placed.length < ans.length){
+      verdict.textContent = 'まだ ' + (ans.length - placed.length) + ' 語のこっています。';
+      verdict.className = 'verdict no';
+      return;
+    }
+    var ok = placed.every(function(w, i){ return w.t === ans[i].t; });
+    if (ok){
+      verdict.textContent = '正解！ ' + ans.map(function(w){ return w.t; }).join('') + '（' + ans.map(function(w){ return w.k; }).join('・') + '）';
+      verdict.className = 'verdict ok';
+      btnNext.hidden = (round >= ROUNDS.length - 1);
+      if (round >= ROUNDS.length - 1){
+        verdict.textContent += ' — ぜんぶクリア！';
+      }
+    } else {
+      verdict.textContent = 'おしい！ S（誰が）→ V（何する）→ O（何を）の順で見なおしてみよう。';
+      verdict.className = 'verdict no';
+    }
+  });
+
+  btnReset.addEventListener('click', start);
+  btnNext.addEventListener('click', function(){
+    round = Math.min(round + 1, ROUNDS.length - 1);
+    start();
+  });
+
+  start();
+})();
+</script>

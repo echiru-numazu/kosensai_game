@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(foreach \\($c in 'py','python3','node','npm','pwsh'\\) { $p = \\(Get-Command $c -ErrorAction SilentlyContinue\\); if \\($p\\) { \"$c -> $\\($p.Source\\)\" } else { \"$c -> MISSING\" } })",
+      "PowerShell($t = Get-Content 'thai-phrasebook.html' -Raw -Encoding UTF8; \"len=$\\($t.Length\\)\"; foreach \\($k in 'IPA','ipa','katakana','カタカナ','speechSynthesis','audio','button','phrase-card'\\) { \"$k : \" + \\([regex]::Matches\\($t,[regex]::Escape\\($k\\)\\)\\).Count })",
+      "PowerShell($t = Get-Content 'thai-phrasebook.html' -Raw -Encoding UTF8; $i = $t.IndexOf\\('</style>'\\); $t.Substring\\($i, 6000\\))"
+    ]
+  }
+}
