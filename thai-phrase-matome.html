@@ -72,7 +72,13 @@ a{color:inherit}
 .mini{display:inline-flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--board-line);
   color:var(--board-ink);border-radius:999px;padding:6px 14px;font-size:.8rem;font-weight:700;white-space:nowrap}
 .mini:hover{border-color:var(--gold);color:var(--gold)}
-.mini svg{width:16px;height:16px}
+.mini svg{width:16px;height:16px;flex:none}
+a.mini{text-decoration:none}
+/* せまい画面では「トップへ」はアイコンだけにする */
+@media (max-width:480px){
+  .home{width:34px;height:34px;padding:0;justify-content:center;flex:none}
+  .home .lab{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+}
 
 /* ---------- layout ---------- */
 .layout{max-width:1160px;margin:0 auto;
@@ -237,6 +243,10 @@ footer p{font-size:.85rem;color:var(--board-muted)}
 
 <header class="topbar" id="topbar">
   <div class="inner">
+    <a class="mini home" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+      <span class="lab">トップへ</span>
+    </a>
     <div class="brand">
       <span class="brand-th">ประโยคที่ใช้บ่อย</span>
       <span class="brand-jp">タイでよく使う表現まとめ</span>
