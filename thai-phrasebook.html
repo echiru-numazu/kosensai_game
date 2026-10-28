@@ -1,6 +1,6 @@
 <title>タイでよく使う表現</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chonburi&family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+Thai:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans+Thai+Looped:wght@400;500;700;800&display=swap">
 
 <style>
 /* Layout: a market-stall booklet — alternating wide illustrated scenes and phrase cards in a wrapping grid. */
@@ -24,9 +24,9 @@
   --skin:#e3b188;
   --on-temple:#f2efe2;
 
-  --font-display:"Chonburi","Noto Serif Thai",ui-serif,serif;
-  --font-jp:"Zen Maru Gothic",system-ui,-apple-system,"Hiragino Maru Gothic ProN",sans-serif;
-  --font-thai:"Noto Sans Thai","Zen Maru Gothic",sans-serif;
+  --font-display:"Noto Sans Thai Looped","Noto Sans JP",sans-serif;
+  --font-jp:"Noto Sans JP",system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
+  --font-thai:"Noto Sans Thai Looped","Noto Sans Thai","Noto Sans JP",sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0a1f1d; --surface:#112c28; --sunken:#0d2522; --ink:#e6f1ec; --muted:#8fb2a8;
@@ -73,7 +73,7 @@ nav.topbar a{flex:0 0 auto;color:#d7e6de;text-decoration:none;font-size:.8rem;fo
   padding:6px 11px;border-radius:999px;white-space:nowrap}
 nav.topbar a:hover{background:rgba(255,255,255,.12);color:#fff}
 nav.topbar a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-nav.topbar .brand{flex:0 0 auto;font-family:var(--font-display);color:var(--gold);font-size:.95rem;
+nav.topbar .brand{flex:0 0 auto;font-family:var(--font-display);font-weight:700;color:var(--gold);font-size:.95rem;
   padding-right:10px;margin-right:4px;border-right:1px solid rgba(255,255,255,.18)}
 
 /* ---------- hero ---------- */
@@ -86,7 +86,7 @@ nav.topbar .brand{flex:0 0 auto;font-family:var(--font-display);color:var(--gold
   padding:5px 14px;font-size:.78rem;font-weight:700;letter-spacing:.08em}
 .hero-kicker svg{width:18px;height:14px;flex:0 0 auto}
 .hero h1{font-size:clamp(2.1rem,7.2vw,3.5rem);font-weight:900;letter-spacing:.01em;margin-top:16px}
-.hero .thai-wordmark{font-family:var(--font-display);color:var(--gold);
+.hero .thai-wordmark{font-family:var(--font-display);font-weight:700;color:var(--gold);
   font-size:clamp(1.6rem,5.5vw,2.4rem);line-height:1.5;margin-top:4px}
 .hero .lead{color:#cfe2d9;margin-top:14px;max-width:34em}
 .hero-stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
@@ -95,7 +95,7 @@ nav.topbar .brand{flex:0 0 auto;font-family:var(--font-display);color:var(--gold
 .scene-hero{display:block;width:100%;height:auto;max-width:100%;border-radius:20px 20px 0 0}
 
 /* ---------- section heads ---------- */
-.eyebrow{font-family:var(--font-display);color:var(--gold);font-size:1.15rem;line-height:1.4}
+.eyebrow{font-family:var(--font-display);font-weight:700;color:var(--gold);font-size:1.15rem;line-height:1.4}
 .sec-head{display:grid;gap:8px;margin-bottom:clamp(22px,3vw,34px)}
 .sec-head h2{font-size:clamp(1.45rem,4.4vw,2.1rem);font-weight:900}
 .sec-head .lead{color:var(--muted);max-width:40em}
@@ -182,7 +182,7 @@ figure.scene figcaption{background:var(--surface);border-top:1px solid var(--lin
 .step .pic svg{width:100%;height:100%;display:block}
 .step h3{font-size:1.02rem}
 .step p{font-size:.9rem;color:var(--muted)}
-.step .no{font-family:var(--font-display);color:var(--gold);font-size:1.3rem;line-height:1}
+.step .no{font-family:var(--font-display);font-weight:700;color:var(--gold);font-size:1.3rem;line-height:1}
 
 /* ---------- mini game ---------- */
 .game{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(16px,3vw,24px);

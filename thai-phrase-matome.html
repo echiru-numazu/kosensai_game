@@ -6,13 +6,13 @@
 <title>タイ語フレーズまとめ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chonburi&family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans+Thai+Looped:wght@400;500;700;800&family=Noto+Sans:wght@400;600&display=swap">
 
 <style>
 /* Layout: same booth palette as the sentence game, light only — a mint board for the archive, white sheets for the phrases */
 :root{
   color-scheme:light;
-  --bg:#faf6ec;
+  --bg:#ffffff;
   --paper:#ffffff;
   --ink:#1b3430;
   --muted:#5b766e;
@@ -34,9 +34,9 @@
   --plum:#7b5ea7;
   --cyan:#23808e;
 
-  --font-display:"Chonburi","Noto Serif Thai",ui-serif,serif;
-  --font-jp:"Zen Maru Gothic",system-ui,-apple-system,"Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
-  --font-thai:"Noto Sans Thai","Zen Maru Gothic",sans-serif;
+  --font-display:"Noto Sans Thai Looped","Noto Sans JP",sans-serif;
+  --font-jp:"Noto Sans JP",system-ui,-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
+  --font-thai:"Noto Sans Thai Looped","Noto Sans Thai","Noto Sans JP",sans-serif;
   --font-ipa:"Noto Sans","Doulos SIL","Charis SIL","Segoe UI","Lucida Sans Unicode",sans-serif;
 
   --head-h:60px;
@@ -65,7 +65,8 @@ a{color:inherit}
   padding-left:max(16px,env(safe-area-inset-left,0px));
   padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:10px}
 .brand{display:flex;flex-direction:column;line-height:1.25;min-width:0;margin-right:auto}
-.brand-th{font-family:var(--font-display);color:var(--gold);font-size:1.05rem}
+.brand-th,.brand-jp{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-th{font-family:var(--font-display);font-weight:700;color:var(--gold);font-size:1.05rem}
 .brand-jp{font-size:.8rem;font-weight:700;letter-spacing:.02em}
 .count{font-size:.8rem;font-weight:700;color:var(--board-muted);white-space:nowrap}
 @media (max-width:480px){.count{display:none}}
@@ -99,7 +100,7 @@ main{padding-block:clamp(22px,4vw,40px) clamp(40px,6vw,64px);min-width:0}
 .archive-head{display:flex;align-items:center;gap:10px;padding:14px 16px 12px;
   border-bottom:1px solid var(--board-line)}
 .archive-head .t{display:flex;flex-direction:column;line-height:1.25;margin-right:auto}
-.archive-head .t b{font-family:var(--font-display);color:var(--gold);font-weight:400;font-size:1.05rem}
+.archive-head .t b{font-family:var(--font-display);font-weight:700;color:var(--gold);font-size:1.05rem}
 .archive-head .t span{font-size:.78rem;font-weight:700;color:var(--board-muted)}
 .archive-list{overflow-y:auto;overscroll-behavior:contain;padding:8px 10px 20px;flex:1;min-height:0}
 .archive-group{margin-top:12px}
@@ -111,7 +112,7 @@ main{padding-block:clamp(22px,4vw,40px) clamp(40px,6vw,64px);min-width:0}
   padding:7px 10px;border-radius:10px;font-size:.92rem;font-weight:500;line-height:1.5;
   border-left:3px solid transparent}
 .archive a:hover{background:rgba(255,255,255,.6)}
-.archive a .n{flex:none;min-width:1.7em;text-align:right;font-family:var(--font-display);
+.archive a .n{flex:none;min-width:1.7em;text-align:right;font-family:var(--font-display);font-weight:700;
   color:var(--gold);font-size:.85rem}
 .archive a.active{background:var(--paper);border-left-color:var(--gold);font-weight:700;
   box-shadow:0 1px 3px rgba(23,61,54,.1)}
@@ -160,7 +161,7 @@ main{padding-block:clamp(22px,4vw,40px) clamp(40px,6vw,64px);min-width:0}
 .group + .group{margin-top:clamp(36px,6vw,56px)}
 .group-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;
   background:var(--board);color:var(--board-ink);border-radius:16px;padding:12px 18px;margin-bottom:clamp(20px,4vw,30px)}
-.group-head .th{font-family:var(--font-display);color:var(--gold);font-size:clamp(1.1rem,4vw,1.35rem)}
+.group-head .th{font-family:var(--font-display);font-weight:700;color:var(--gold);font-size:clamp(1.1rem,4vw,1.35rem)}
 .group-head h2{font-size:clamp(1.05rem,3.6vw,1.2rem);font-weight:900}
 .group-head .cnt{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--board-muted)}
 
@@ -171,14 +172,14 @@ main{padding-block:clamp(22px,4vw,40px) clamp(40px,6vw,64px);min-width:0}
   line-height:1.45;padding-bottom:10px;margin-bottom:22px;
   background:linear-gradient(var(--gold),var(--gold)) left bottom/120px 4px no-repeat,
              linear-gradient(var(--line),var(--line)) left bottom/100% 1px no-repeat}
-.ph-no{font-family:var(--font-display);color:var(--gold);font-weight:400;flex:none}
+.ph-no{font-family:var(--font-display);font-weight:700;color:var(--gold);flex:none}
 
 .sheet{border-radius:4px;overflow:hidden}
 .sheet-th{background:var(--head);color:#fff;text-align:center;font-weight:700;
   font-size:clamp(1.35rem,5vw,1.75rem);line-height:1.6;padding:14px 16px;overflow-wrap:anywhere}
 .sheet-row{position:relative;background:var(--jade-soft);text-align:center;padding:13px 70px;
   font-size:1.05rem;line-height:1.6;overflow-wrap:anywhere}
-.sheet-row + .sheet-row,.sheet-th + .sheet-row{border-top:2px solid var(--bg)}
+.sheet-row + .sheet-row,.sheet-th + .sheet-row{border-top:2px solid #ffffff}
 .sheet-lab{position:absolute;left:12px;top:50%;transform:translateY(-50%);
   font-family:var(--font-jp);font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--muted)}
 .sheet-row .kana{font-weight:700}
@@ -201,7 +202,7 @@ main{padding-block:clamp(22px,4vw,40px) clamp(40px,6vw,64px);min-width:0}
 .an-head::after{content:"";flex:1;height:1px;background:var(--line)}
 .chips{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
 .plus{font-weight:900;color:var(--muted);font-size:1.1rem}
-.chip{display:grid;justify-items:center;gap:0;min-width:108px;max-width:100%;text-align:center;
+.chip{display:grid;justify-items:center;gap:0;min-width:108px;max-width:100%;text-align:center;box-shadow:0 2px 6px rgba(23,61,54,.08);
   background:var(--bg);border:2px solid var(--line);border-top:6px solid var(--role);
   border-radius:14px;padding:6px 12px 9px}
 .chip-role{font-size:.68rem;font-weight:700;letter-spacing:.05em;color:var(--role)}
@@ -235,7 +236,7 @@ main{padding-block:clamp(22px,4vw,40px) clamp(40px,6vw,64px);min-width:0}
 
 footer{background:var(--board);color:var(--board-ink);text-align:center;
   padding:clamp(22px,4vw,34px) 16px calc(clamp(22px,4vw,34px) + env(safe-area-inset-bottom,0px))}
-footer .th{font-family:var(--font-display);color:var(--gold);font-size:1.3rem}
+footer .th{font-family:var(--font-display);font-weight:700;color:var(--gold);font-size:1.3rem}
 footer p{font-size:.85rem;color:var(--board-muted)}
 </style>
 </head>
